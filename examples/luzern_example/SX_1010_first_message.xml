@@ -34,7 +34,7 @@
 					<Planned>false</Planned>
 					<Language>DE</Language>
 					<Summary xml:lang="DE">Unterbruch zwischen Luzernerhof und Verkehrshaus</Summary>
-					<Summary xml:lang="EN">Line interruption between Luzernerhof and Verkehrshaus</Summary>
+					<Summary xml:lang="EN">Line disruption between Luzernerhof and Verkehrshaus</Summary>
 					<!-- Kein Infolink element im PT Situation laut Verwendungstabelle -->
 					<Affects>
 						<StopPlaces>
@@ -109,7 +109,7 @@
 									<TextualContentSize>L</TextualContentSize>
 									<SummaryContent>
 										<SummaryText xml:lang="DE">Unterbruch zwischen Luzernerhof und Verkehrshaus</SummaryText>
-										<SummaryText xml:lang="EN">Line interruption between Luzernerhof and Verkehrshaus</SummaryText>
+										<SummaryText xml:lang="EN">Line disruption between Luzernerhof and Verkehrshaus</SummaryText>
 									</SummaryContent>
 									<ReasonContent>
 										<ReasonText xml:lang="DE">Feuerwehreinsatz in der Haldenstrasse</ReasonText>
@@ -167,7 +167,7 @@
 									<TextualContentSize>L</TextualContentSize>
 									<SummaryContent>
 										<SummaryText xml:lang="DE">Unterbruch zwischen Luzernerhof und Verkehrshaus</SummaryText>
-										<SummaryText xml:lang="EN">Line interruption between Luzernerhof and Verkehrshaus</SummaryText>
+										<SummaryText xml:lang="EN">Line disruption between Luzernerhof and Verkehrshaus</SummaryText>
 									</SummaryContent>
 									<ReasonContent>
 										<ReasonText xml:lang="DE">Feuerwehreinsatz in der Haldenstrasse</ReasonText>
@@ -225,7 +225,7 @@
 									<TextualContentSize>L</TextualContentSize>
 									<SummaryContent>
 										<SummaryText xml:lang="DE">Unterbruch zwischen Luzernerhof und Verkehrshaus</SummaryText>
-										<SummaryText xml:lang="EN">Line interruption between Luzernerhof and Verkehrshaus</SummaryText>
+										<SummaryText xml:lang="EN">Line disruption between Luzernerhof and Verkehrshaus</SummaryText>
 									</SummaryContent>
 									<ReasonContent>
 										<ReasonText xml:lang="DE">Feuerwehreinsatz in der Haldenstrasse</ReasonText>
