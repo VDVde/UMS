@@ -1854,15 +1854,12 @@
 									<TextualContentSize>L</TextualContentSize>
 									<SummaryContent>
 										<SummaryText xml:lang="DE">Unterbruch zwischen Luzernerhof und Verkehrshaus</SummaryText>
-										<SummaryText xml:lang="EN">Line disruption between Luzernerhof and Verkehrshaus</SummaryText>
 									</SummaryContent>
 									<ReasonContent>
 										<ReasonText xml:lang="DE">Feuerwehreinsatz in der Haldenstrasse</ReasonText>
-										<ReasonText xml:lang="EN">Fire brigade action at Haldenstrasse</ReasonText>
 									</ReasonContent>
 									<RecommendationContent>
 										<RecommendationText xml:lang="DE">Umstieg auf Linie 6 und 8: Einstieg bei Kante A. Reisende nach Haldensteig, Casino-Palace, Europe, Dietschiberg und Verkehrshaus erreichen ihr Ziel nur zu Fuß.</RecommendationText>
-										<RecommendationText xml:lang="EN">Transfer to line 6 and 8: Board from platform A. Travellers to Haldensteig, Casino-Palace, Europe, Dietschiberg and Verkehrshaus can only reach their destination on foot.</RecommendationText>
 									</RecommendationContent>
 								</TextualContent>
 							</PassengerInformationAction>
