@@ -1068,8 +1068,7 @@ Rail transport, Roads and road transport
    <xsd:documentation>Type for a text that may be overridden.</xsd:documentation>
   </xsd:annotation>
   <xsd:simpleContent>
-   <xsd:extension base="PopulatedStringType">
-    <xsd:attribute ref="xml:lang" use="required"/>
+   <xsd:extension base="NaturalLanguageStringStructure">
     <xsd:attribute name="overridden" type="xsd:boolean" use="optional" default="true">
      <xsd:annotation>
       <xsd:documentation>Whether the text value has been overridden from the generated default. Default is 'true'.</xsd:documentation>
