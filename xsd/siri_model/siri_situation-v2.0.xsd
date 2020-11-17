@@ -14,6 +14,8 @@ siri_model\siri_situation-v2.0.xsd:
 13.06.2018 D. Rubli, Siri_XML-2.0p_a0.5:
 - StatusGroup.Progress changed from optional to mandatory
 - PublicationWindow changed to unbounded
+17.11.2020 S. Thiessen, CR_736-029 SEV-Emulation:
+- Added additional Element DelayIncrements.
 -->
  <!-- ======================================================================= -->
  <!--Needed to work around import limitation in JAXB - all namespaces. -->
@@ -1181,6 +1183,7 @@ Rail transport, Roads and road transport
     </xsd:annotation>
    </xsd:element>
    <xsd:element name="Delays" type="DelaysStructure" minOccurs="0"/>
+			<xsd:element name="DelayIncrements" type="DelayIncrementsStructure" minOccurs="0"/>
    <xsd:element name="Casualties" type="CasualtiesStructure" minOccurs="0">
     <xsd:annotation>
      <xsd:documentation>Information on casualties.</xsd:documentation>
@@ -1309,6 +1312,23 @@ Rail transport, Roads and road transport
    </xsd:element>
   </xsd:sequence>
  </xsd:complexType>
+	<xsd:complexType name="DelayIncrementsStructure">
+		<xsd:annotation>
+			<xsd:documentation>Type for easement info.</xsd:documentation>
+		</xsd:annotation>
+		<xsd:sequence>
+			<xsd:element name="DelayType" type="D2LogicalModel:DelaysTypeEnum" minOccurs="0">
+				<xsd:annotation>
+					<xsd:documentation>Category of delay.</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+			<xsd:element name="Delay" type="PositiveDurationType" minOccurs="0">
+				<xsd:annotation>
+					<xsd:documentation>Additional journey time needed to overcome disruption per each stop.</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+		</xsd:sequence>
+	</xsd:complexType>
  <!-- ======================================================================= -->
  <!-- ======================================================================= -->
 </xsd:schema>

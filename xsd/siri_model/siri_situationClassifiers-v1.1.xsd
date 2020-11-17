@@ -1,23 +1,27 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!-- Mit XMLSpy v2018 sp1 (x64) (http://www.altova.com) von David Sielaff (Verkehrsverbund Rhein-Sieg GmbH) bearbeitet -->
 <xsd:schema xmlns="http://www.siri.org.uk/siri" xmlns:xsd="http://www.w3.org/2001/XMLSchema" targetNamespace="http://www.siri.org.uk/siri" elementFormDefault="qualified" attributeFormDefault="unqualified" version="1.1" id="siri_classifiers">
- <xsd:annotation>
-  <xsd:appinfo>
-   <Metadata xmlns="http://www.govtalk.gov.uk/CM/gms-xs">
-    <Aggregation>main schema</Aggregation>
-    <Audience>e-service developers</Audience>
-    <Contributor>Add names </Contributor>
-    <Coverage>Europe</Coverage>
-    <Creator>&gt;Drafted for version 1.0 Kizoom Incident Schema Nicholas Knowles, Kizoom. mailto:schemer@kizoom.org.uk</Creator>
-    <Date>
-     <Created>2008-07-05</Created>
-    </Date>
-    <Date>
-     <Modified>2008-07-05</Modified>
-    </Date>
-    <Date>
-     <Modified>2008-10-01</Modified>
-     <!-- Add predictability status -->
+ <!--
+ 17.11.2020 S. Thiessen, CR_736-029 SEV-Emulation:
+ Added the following values to Element Condition: "incrementDelay","matchingInto","matchingFrom","matchingBoth","matchingInsideOnly" and "noMatchingInside".
+ -->
+<xsd:annotation>
+ <xsd:appinfo>
+  <Metadata xmlns="http://www.govtalk.gov.uk/CM/gms-xs">
+   <Aggregation>main schema</Aggregation>
+   <Audience>e-service developers</Audience>
+   <Contributor>Add names </Contributor>
+   <Coverage>Europe</Coverage>
+   <Creator>&gt;Drafted for version 1.0 Kizoom Incident Schema Nicholas Knowles, Kizoom. mailto:schemer@kizoom.org.uk</Creator>
+   <Date>
+    <Created>2008-07-05</Created>
+   </Date>
+   <Date>
+    <Modified>2008-07-05</Modified>
+   </Date>
+   <Date>
+    <Modified>2008-10-01</Modified>
+    <!-- Add predictability status -->
     </Date>
     <Description>
      <p>SIRI-SX is an XML schema for the exchange of structured incidents. This subschema describes calssifier codes </p>
@@ -135,6 +139,7 @@ Rail transport, Roads and road transport
   <xsd:restriction base="xsd:NMTOKEN">
    <xsd:enumeration value="unknown"/>
    <xsd:enumeration value="delay"/>
+	 <xsd:enumeration value="incrementDelay"/>
    <xsd:enumeration value="minorDelays"/>
    <xsd:enumeration value="majorDelays"/>
    <xsd:enumeration value="operationTimeExtension"/>
@@ -159,6 +164,11 @@ Rail transport, Roads and road transport
    <xsd:enumeration value="trainShortened"/>
    <xsd:enumeration value="additionalRide"/>
    <xsd:enumeration value="replacementRide"/>
+   <xsd:enumeration value="matchingInto"/>
+	 <xsd:enumeration value="matchingFrom"/>
+	 <xsd:enumeration value="matchingBoth"/>
+	 <xsd:enumeration value="matchingInsideOnly"/>
+   <xsd:enumeration value="noMatchingInside"/>
    <xsd:enumeration value="temporarilyNonStopping"/>
    <xsd:enumeration value="temporaryStopplace"/>
    <xsd:enumeration value="undefinedStatus"/>
