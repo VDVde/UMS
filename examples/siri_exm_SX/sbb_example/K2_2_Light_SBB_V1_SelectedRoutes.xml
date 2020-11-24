@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="UTF-8"?><!--
+  ~ Copyright (C) Schweizerische Bundesbahnen SBB, 2020.
+  -->
+<Siri xmlns="http://www.siri.org.uk/siri" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.0" xsi:schemaLocation="http://www.siri.org.uk/siri ../../xsd/siri.xsd">
+		<ServiceDelivery>
+				<ResponseTimestamp>2020-03-19T16:18:00Z</ResponseTimestamp>
+				<ProducerRef>sbb-via-out-sx_test</ProducerRef>
+				<SituationExchangeDelivery version="2.0">
+						<ResponseTimestamp>2020-03-19T16:18:00Z</ResponseTimestamp>
+						<SubscriptionRef>rJZZdSxMB8</SubscriptionRef>
+						<Situations>
+								<PtSituationElement>
+										<CreationTime>2020-03-19T16:18:00Z</CreationTime>
+										<!--Pflicht in VDV736-->
+										<CountryRef>ch</CountryRef>
+										<ParticipantRef>sbb-via-out-sx_test</ParticipantRef>
+										<SituationNumber>ch:1:sstid:100001:000000000001</SituationNumber>
+										<Version>1</Version>
+										<Source>
+												<!--Pflicht in VDV736-->
+												<Country>ch</Country>
+												<SourceType>directReport</SourceType>
+												<!--Optional-->
+												<Name xml:lang="DE">VIA</Name>
+										</Source>
+										<!--Pflicht bei Updates-->
+										<VersionedAtTime>2020-03-19T16:18:00Z</VersionedAtTime>
+										<Progress>published</Progress>
+										<ValidityPeriod>
+												<StartTime>2020-03-19T16:18:00Z</StartTime>
+												<EndTime>2020-03-25T23:59:00Z</EndTime>
+										</ValidityPeriod>
+										<!--Optional-->
+										<PublicationWindow>
+												<StartTime>2020-03-19T16:18:00Z</StartTime>
+												<EndTime>2020-03-25T23:59:00Z</EndTime>
+										</PublicationWindow>
+										<TpegReason>technicalProblem</TpegReason>
+										<!--Optional: wird nicht den Kunden publiziert-->
+										<ReasonName xml:lang="DE">Technische Störung an der Bahnanlage</ReasonName>
+										<!--Zulässig: 1-4-->
+										<Priority>2</Priority>
+										<!-- Dieses Feld wird anhand Planned in der DDS für FISZ gesetzt
+																	  <ReportType>incident</ReportType>-->
+										<!-- Optional: default is false unplanned-->
+										<Planned>false</Planned>
+										<!--Optional: definiert Defaultsprache für die Ausgabe-->
+										<Language>DE</Language>
+										<!-- Optional: beschreibt den Ort des Ereignisses -->
+										<Affects>
+												<Networks>
+														<AffectedNetwork>
+																<AffectedOperator>
+																		<OperatorRef>85:11</OperatorRef>
+																		<OperatorShortName xml:lang="DE">SBB</OperatorShortName>
+																</AffectedOperator>
+																<SelectedRoutes>
+																		<StopPoints>
+																				<AffectedStopPoint>
+																						<StopPointRef>8502017</StopPointRef>
+																						<StopPointName xml:lang="DE">Waldibrücke</StopPointName>
+																						<StopCondition>firstRoutePoint</StopCondition>
+																				</AffectedStopPoint>
+																				<AffectedStopPoint>
+																						<StopPointRef>8502024</StopPointRef>
+																						<StopPointName xml:lang="DE">Hochdorf</StopPointName>
+																						<StopCondition>lastRoutePoint</StopCondition>
+																				</AffectedStopPoint>
+																		</StopPoints>
+																</SelectedRoutes>
+														</AffectedNetwork>
+												</Networks>
+										</Affects>
+						<PublishingActions><!--
+								<PublishByPerspectiveAction>
+										<PublishingAction>
+												<PublicationScope>
+														<ScopeType>line</ScopeType>
+														<Affects>
+																<Networks>
+																		<AffectedNetwork>
+																				<AffectedLine>
+																						<LineRef>85:11:21959</LineRef>
+																						<PublishedLineName xml:lang="DE">S9</PublishedLineName>
+																				</AffectedLine>
+																		</AffectedNetwork>
+																</Networks>
+														</Affects>
+												</PublicationScope>
+												<PassengerInformationAction>
+														<ActionRef>1</ActionRef>
+														<RecordedAtTime>2020-03-19T16:18:00Z</RecordedAtTime>
+														<SourceRef>sbb-via-out-sx_test</SourceRef>
+														<OwnerRef>85:11</OwnerRef>
+														<Perspective>general</Perspective>
+														<TextualContent>
+																<SummaryContent>
+																		<SummaryText xml:lang="DE">Der Bahnverkehr auf der Strecke Luzern und Lenzburg ist in beiden Richtungen zwischen Waldibrücke und Hochdorf eingeschränkt.</SummaryText>
+																</SummaryContent>
+														</TextualContent>
+												</PassengerInformationAction>
+										</PublishingAction>
+								</PublishByPerspectiveAction>-->
+						</PublishingActions>
+				</PtSituationElement>
+		</Situations>
+</SituationExchangeDelivery>
+	</ServiceDelivery>
+	</Siri>

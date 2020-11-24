@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<!--
+  ~ Copyright (C) Schweizerische Bundesbahnen SBB, 2020.
+  -->
+
+<Siri xmlns="http://www.siri.org.uk/siri" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.0" xsi:schemaLocation="http://www.siri.org.uk/siri ../../../xsd/siri.xsd">
+	<ServiceDelivery>
+		<ResponseTimestamp>2020-10-01T13:10:00+02:00</ResponseTimestamp>
+		<ProducerRef>MES</ProducerRef>
+		<SituationExchangeDelivery version="2.0">
+			<ResponseTimestamp>2020-10-01T13:10:00+02:00</ResponseTimestamp>
+			<Situations>
+				<PtSituationElement>
+					<CreationTime>2020-10-01T13:10:00+02:00</CreationTime>
+						<!-- Added by Priscila -->
+						<CountryRef>de</CountryRef>
+					<ParticipantRef>S-Bahn-HH</ParticipantRef>
+					<SituationNumber>201001001</SituationNumber>
+						<!-- Added by Priscila -->
+						<Version>1</Version>
+					<Source>
+							<!-- Added by Priscila -->
+							<Country>de</Country>
+						<SourceType>web</SourceType>
+						<AgentReference>S-DB-HH</AgentReference>
+						<Name xml:lang="DE">S-Bahn MES Disponent</Name>
+						<TimeOfCommunication>2020-10-01T13:08:00+02:00</TimeOfCommunication>
+					</Source>
+					<Progress>published</Progress>
+					<ValidityPeriod>
+						<StartTime>2020-10-01T13:10:00+02:00</StartTime>
+							<EndTime>2020-10-01T15:10:00+02:00</EndTime>
+							<!-- Removed by Priscila
+						<EndTimeStatus>undefined</EndTimeStatus>-->
+					</ValidityPeriod>
+					<PublicationWindow>
+						<StartTime>2020-10-01T13:10:00+02:00</StartTime>
+							<EndTime>2020-10-01T15:10:00+02:00</EndTime>
+							<!-- Removed by Priscila
+						<EndTimeStatus>undefined</EndTimeStatus>-->
+					</PublicationWindow>
+					<TpegReason>policeActivity</TpegReason>
+					<Priority>2</Priority>	<!-- high -->
+					<Planned>false</Planned>
+						<!--TODO PublishingAction missing-->
+					<Summary xml:lang="DE">Polizei-Einsatz in Sülldorf.</Summary>
+					<Description xml:lang="DE">Polizei-Einsatz an der 
+							S-Bahn-Haltestelle Sülldorf wegen spielender Kinder 
+							im Gleisbereich und herumstreunender Tiere. </Description>
+					<Affects>
+						<StopPlaces>
+							<AffectedStopPlace>
+								<StopPlaceRef>de:02000:81952</StopPlaceRef>
+								<PlaceName xml:lang="DE">Sülldorf</PlaceName>
+							</AffectedStopPlace>
+						</StopPlaces>
+					</Affects>
+				</PtSituationElement>
+			</Situations>
+		</SituationExchangeDelivery>
+	</ServiceDelivery>
+</Siri>
