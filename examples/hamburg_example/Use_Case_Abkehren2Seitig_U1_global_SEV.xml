@@ -10,7 +10,7 @@
 					<CreationTime>2020-10-01T13:20:00+02:00</CreationTime>
 					<ParticipantRef>U-Bahn-HH</ParticipantRef>
 					<SituationNumber>201001002</SituationNumber>
-					<Version>0</Version>
+					<Version>2</Version>
 					<Source>
 						<SourceType>web</SourceType>
 						<AgentReference>Hochbahn_U</AgentReference>
@@ -89,357 +89,17 @@
 									 it would run all the way (but ends the trip in Hauptbahnhof Süd) -->
 							</Blocking>
 						</Consequence>
-						<Consequence>		<!-- matchingInto SEV Ri 6 -->
+						<Consequence>
+							<!-- FORMER matchingInto SEV Ri 6 -->
 							<Period>
 								<StartTime>2020-10-01T13:45:00+02:00</StartTime>
 								<EndTime>2020-10-01T16:00:00+02:00</EndTime>
 							</Period>
-							<Condition>delay</Condition>
-							<Condition>incrementDelay</Condition>
-							<!-- Simulation of SEV by a DELAY and an INCREMENT_DELAY for the SEV-area -->
-							<Condition>replacementRide</Condition>
-							<Condition>matchingInto</Condition>
-							<!-- special handling for the case the trip starts 
-									outside the disrupped portion but ends inside -->
-							<Affects>
-								<Networks>
-									<AffectedNetwork>
-										<AffectedLine>
-											<AffectedOperator>
-												<OperatorShortName xml:lang="DE">HHA-U</OperatorShortName>
-											</AffectedOperator>
-											<LineRef>HHA-U:U1_HHA-U</LineRef>
-											<PublishedLineName xml:lang="DE">U1</PublishedLineName>
-											<Direction>
-												<DirectionRef>6</DirectionRef>
-												<DirectionName>Norderstedt Mitte</DirectionName>
-											</Direction>
-											<StopPoints>
-												<!-- the portion between Steinstraße and Jungfernstieg is affected by the delay  -->
-												<AffectedStopPoint>
-													<StopPointRef>de:02000:10907</StopPointRef>
-													<StopPointName xml:lang="DE">Steinstraße</StopPointName>
-												</AffectedStopPoint>
-												<AffectedStopPoint>
-													<StopPointRef>de:02000:11903</StopPointRef>
-													<StopPointName xml:lang="DE">Meßberg</StopPointName>
-												</AffectedStopPoint>
-												<AffectedStopPoint>
-													<StopPointRef>de:02000:11950</StopPointRef>
-													<StopPointName xml:lang="DE">Jungfernstieg</StopPointName>
-												</AffectedStopPoint>
-											</StopPoints>
-										</AffectedLine>
-									</AffectedNetwork>
-								</Networks>
-							</Affects>
-							<Advice>
-								<Details xml:lang="DE">Der SEV hält an der regulären Bus-Haltestelle am jeweiligen U-Bahnhof.</Details>
-							</Advice>
-							<Blocking>
-								<JourneyPlanner>true</JourneyPlanner>
-								<!-- handle replacementRide (SEV) in Journey Planner -->
-								<RealTime>true</RealTime>
-								<!-- this blocks the real-time for the U1, which tells, 
-									 it would run all the way (but ends the trip in Hauptbahnhof Süd) -->
-							</Blocking>
-							<Delays>
-								<DelayType>delays</DelayType>
-								<Delay>PT10M</Delay>
-								<!-- 10 minutes for the change to SEV-->
-							</Delays>
-							<DelayIncrements>
-								<DelayType>delays</DelayType>
-								<Delay>PT5M</Delay>
-								<!-- 5 Minutes per stop -->
-							</DelayIncrements>
-						</Consequence>
-						<Consequence>		<!-- matchingInto SEV Ri 1 -->
-							<Period>
-								<StartTime>2020-10-01T13:45:00+02:00</StartTime>
-								<EndTime>2020-10-01T16:00:00+02:00</EndTime>
-							</Period>
-							<Condition>delay</Condition>
-							<Condition>incrementDelay</Condition>
-							<!-- Simulation of SEV by a DELAY and an INCREMENT_DELAY for the SEV-area -->
-							<Condition>replacementRide</Condition>
-							<Condition>matchingInto</Condition>
-							<!-- special handling for the case the trip starts 
-									outside the disrupped portion but ends inside -->
-							<Affects>
-								<Networks>
-									<AffectedNetwork>
-										<AffectedLine>
-											<AffectedOperator>
-												<OperatorShortName xml:lang="DE">HHA-U</OperatorShortName>
-											</AffectedOperator>
-											<LineRef>HHA-U:U1_HHA-U</LineRef>
-											<PublishedLineName xml:lang="DE">U1</PublishedLineName>
-											<Direction>
-												<DirectionRef>1</DirectionRef>
-												<DirectionName>Großhansdorf</DirectionName>
-											</Direction>
-											<Direction>
-												<DirectionRef>1</DirectionRef>
-												<DirectionName>Ohlstedt</DirectionName>
-											</Direction>
-											<StopPoints>
-												<!-- the portion between Hauptbahnhof Süd and Meßberg is affected by the delay  -->
-												<AffectedStopPoint>
-													<StopPointRef>de:02000:10906</StopPointRef>
-													<StopPointName xml:lang="DE">Hauptbahnhof Süd</StopPointName>
-												</AffectedStopPoint>
-												<AffectedStopPoint>
-													<StopPointRef>de:02000:10907</StopPointRef>
-													<StopPointName xml:lang="DE">Steinstraße</StopPointName>
-												</AffectedStopPoint>
-												<AffectedStopPoint>
-													<StopPointRef>de:02000:11903</StopPointRef>
-													<StopPointName xml:lang="DE">Meßberg</StopPointName>
-												</AffectedStopPoint>
-											</StopPoints>
-										</AffectedLine>
-									</AffectedNetwork>
-								</Networks>
-							</Affects>
-							<Advice>
-								<Details xml:lang="DE">Der SEV hält an der regulären Bus-Haltestelle am jeweiligen U-Bahnhof.</Details>
-							</Advice>
-							<Blocking>
-								<JourneyPlanner>true</JourneyPlanner>
-								<!-- handle replacementRide (SEV) in Journey Planner -->
-								<RealTime>true</RealTime>
-								<!-- this blocks the real-time for the U1, which tells, 
-									 it would run all the way (but ends the trip in Hauptbahnhof Süd) -->
-							</Blocking>
-							<Delays>
-								<DelayType>delays</DelayType>
-								<Delay>PT10M</Delay>
-								<!-- 10 minutes for the change to SEV-->
-							</Delays>
-							<DelayIncrements>
-								<DelayType>delays</DelayType>
-								<Delay>PT5M</Delay>
-								<!-- 5 Minutes per stop -->
-							</DelayIncrements>
-						</Consequence>
-						<Consequence>		<!-- matchingFrom SEV Ri 1 -->
-							<Period>
-								<StartTime>2020-10-01T13:45:00+02:00</StartTime>
-								<EndTime>2020-10-01T16:00:00+02:00</EndTime>
-							</Period>
-							<Condition>delay</Condition>
-							<Condition>incrementDelay</Condition>
-							<!-- Simulation of SEV by a DELAY and an INCREMENT_DELAY for the SEV-area -->
-							<Condition>replacementRide</Condition>
-							<Condition>matchingFrom</Condition>
-							<!-- special handling for the case the trip starts 
-									inside the disrupped portion but ends outside -->
-							<Affects>
-								<Networks>
-									<AffectedNetwork>
-										<AffectedLine>
-											<AffectedOperator>
-												<OperatorShortName xml:lang="DE">HHA-U</OperatorShortName>
-											</AffectedOperator>
-											<LineRef>HHA-U:U1_HHA-U</LineRef>
-											<PublishedLineName xml:lang="DE">U1</PublishedLineName>
-											<Direction>
-												<DirectionRef>1</DirectionRef>
-												<DirectionName>Großhansdorf</DirectionName>
-											</Direction>
-											<Direction>
-												<DirectionRef>1</DirectionRef>
-												<DirectionName>Ohlstedt</DirectionName>
-											</Direction>
-											<StopPoints>
-												<!-- the portion between Steinstraße and Jungfernstieg is affected by the delay  -->
-												<AffectedStopPoint>
-													<StopPointRef>de:02000:10907</StopPointRef>
-													<StopPointName xml:lang="DE">Steinstraße</StopPointName>
-												</AffectedStopPoint>
-												<AffectedStopPoint>
-													<StopPointRef>de:02000:11903</StopPointRef>
-													<StopPointName xml:lang="DE">Meßberg</StopPointName>
-												</AffectedStopPoint>
-												<AffectedStopPoint>
-													<StopPointRef>de:02000:11950</StopPointRef>
-													<StopPointName xml:lang="DE">Jungfernstieg</StopPointName>
-												</AffectedStopPoint>
-											</StopPoints>
-										</AffectedLine>
-									</AffectedNetwork>
-								</Networks>
-							</Affects>
-							<Advice>
-								<Details xml:lang="DE">Der SEV hält an der regulären Bus-Haltestelle am jeweiligen U-Bahnhof.</Details>
-							</Advice>
-							<Blocking>
-								<JourneyPlanner>true</JourneyPlanner>
-								<!-- handle replacementRide (SEV) in Journey Planner -->
-								<RealTime>true</RealTime>
-								<!-- this blocks the real-time for the U1, which tells, 
-									 it would run all the way (but ends the trip in Hauptbahnhof Süd) -->
-							</Blocking>
-							<Delays>
-								<DelayType>delays</DelayType>
-								<Delay>PT10M</Delay>
-								<!-- 10 minutes for the change to SEV-->
-							</Delays>
-							<DelayIncrements>
-								<DelayType>delays</DelayType>
-								<Delay>PT5M</Delay>
-								<!-- 5 Minutes per stop -->
-							</DelayIncrements>
-						</Consequence>
-						<Consequence>		<!-- matchingFrom SEV Ri 6 -->
-							<Period>
-								<StartTime>2020-10-01T13:45:00+02:00</StartTime>
-								<EndTime>2020-10-01T16:00:00+02:00</EndTime>
-							</Period>
-							<Condition>delay</Condition>
-							<Condition>incrementDelay</Condition>
-							<!-- Simulation of SEV by a DELAY and an INCREMENT_DELAY for the SEV-area -->
-							<Condition>replacementRide</Condition>
-							<Condition>matchingFrom</Condition>
-							<!-- special handling for the case the trip starts 
-									inside the disrupped portion but ends outside -->
-							<Affects>
-								<Networks>
-									<AffectedNetwork>
-										<AffectedLine>
-											<AffectedOperator>
-												<OperatorShortName xml:lang="DE">HHA-U</OperatorShortName>
-											</AffectedOperator>
-											<LineRef>HHA-U:U1_HHA-U</LineRef>
-											<PublishedLineName xml:lang="DE">U1</PublishedLineName>
-											<Direction>
-												<DirectionRef>6</DirectionRef>
-												<DirectionName>Norderstedt Mitte</DirectionName>
-											</Direction>
-											<StopPoints>
-												<!-- the portion between Hauptbahnhof Süd and Meßberg is affected by the delay  -->
-												<AffectedStopPoint>
-													<StopPointRef>de:02000:10906</StopPointRef>
-													<StopPointName xml:lang="DE">Hauptbahnhof Süd</StopPointName>
-												</AffectedStopPoint>
-												<AffectedStopPoint>
-													<StopPointRef>de:02000:10907</StopPointRef>
-													<StopPointName xml:lang="DE">Steinstraße</StopPointName>
-												</AffectedStopPoint>
-												<AffectedStopPoint>
-													<StopPointRef>de:02000:11903</StopPointRef>
-													<StopPointName xml:lang="DE">Meßberg</StopPointName>
-												</AffectedStopPoint>
-											</StopPoints>
-										</AffectedLine>
-									</AffectedNetwork>
-								</Networks>
-							</Affects>
-							<Advice>
-								<Details xml:lang="DE">Der SEV hält an der regulären Bus-Haltestelle am jeweiligen U-Bahnhof.</Details>
-							</Advice>
-							<Blocking>
-								<JourneyPlanner>true</JourneyPlanner>
-								<!-- handle replacementRide (SEV) in Journey Planner -->
-								<RealTime>true</RealTime>
-								<!-- this blocks the real-time for the U1, which tells, 
-									 it would run all the way (but ends the trip in Hauptbahnhof Süd) -->
-							</Blocking>
-							<Delays>
-								<DelayType>delays</DelayType>
-								<Delay>PT10M</Delay>
-								<!-- 10 minutes for the change to SEV-->
-							</Delays>
-							<DelayIncrements>
-								<DelayType>delays</DelayType>
-								<Delay>PT5M</Delay>
-								<!-- 5 Minutes per stop -->
-							</DelayIncrements>
-						</Consequence>
-						<Consequence>		<!-- matchingInsideOnly SEV -->
-							<Period>
-								<StartTime>2020-10-01T13:45:00+02:00</StartTime>
-								<EndTime>2020-10-01T16:00:00+02:00</EndTime>
-							</Period>
-							<Condition>incrementDelay</Condition>
-							<!-- Simulation of SEV by a DELAY and an INCREMENT_DELAY for the SEV-area -->
-							<Condition>replacementRide</Condition>
-							<Condition>matchingInsideOnly</Condition>
-							<!-- special handling for the case the trip starts 
-									and ends inside the disrupped portion -->
-							<Affects>
-								<Networks>
-									<AffectedNetwork>
-										<AffectedLine>
-											<AffectedOperator>
-												<OperatorShortName xml:lang="DE">HHA-U</OperatorShortName>
-											</AffectedOperator>
-											<LineRef>HHA-U:U1_HHA-U</LineRef>
-											<PublishedLineName xml:lang="DE">U1</PublishedLineName>
-											<!-- in both directions  -->
-											<Direction>
-												<DirectionRef>1</DirectionRef>
-												<DirectionName>Großhansdorf</DirectionName>
-											</Direction>
-											<Direction>
-												<DirectionRef>1</DirectionRef>
-												<DirectionName>Ohlstedt</DirectionName>
-											</Direction>
-											<Direction>
-												<DirectionRef>6</DirectionRef>
-												<DirectionName>Norderstedt Mitte</DirectionName>
-											</Direction>
-											<StopPoints>
-												<!-- the portion between Hauptbahnhof Süd and Jungfernstieg is affected by the delay  -->
-												<AffectedStopPoint>
-													<StopPointRef>de:02000:10906</StopPointRef>
-													<StopPointName xml:lang="DE">Hauptbahnhof Süd</StopPointName>
-												</AffectedStopPoint>
-												<AffectedStopPoint>
-													<StopPointRef>de:02000:10907</StopPointRef>
-													<StopPointName xml:lang="DE">Steinstraße</StopPointName>
-												</AffectedStopPoint>
-												<AffectedStopPoint>
-													<StopPointRef>de:02000:11903</StopPointRef>
-													<StopPointName xml:lang="DE">Meßberg</StopPointName>
-												</AffectedStopPoint>
-												<AffectedStopPoint>
-													<StopPointRef>de:02000:11950</StopPointRef>
-													<StopPointName xml:lang="DE">Jungfernstieg</StopPointName>
-												</AffectedStopPoint>
-											</StopPoints>
-										</AffectedLine>
-									</AffectedNetwork>
-								</Networks>
-							</Affects>
-							<Advice>
-								<Details xml:lang="DE">Der SEV hält an der regulären Bus-Haltestelle am jeweiligen U-Bahnhof.</Details>
-							</Advice>
-							<Blocking>
-								<JourneyPlanner>true</JourneyPlanner>
-								<!-- handle replacementRide (SEV) in Journey Planner -->
-								<RealTime>true</RealTime>
-								<!-- this blocks the real-time for the U1, which tells, 
-									 it would run all the way (but ends the trip in Hauptbahnhof Süd) -->
-							</Blocking>
-							<DelayIncrements>
-								<DelayType>delays</DelayType>
-								<Delay>PT5M</Delay>
-								<!-- 5 Minutes per stop -->
-							</DelayIncrements>
-						</Consequence>
-						<Consequence>		<!-- matchingBoth SEV -->
-							<Period>
-								<StartTime>2020-10-01T13:45:00+02:00</StartTime>
-								<EndTime>2020-10-01T16:00:00+02:00</EndTime>
-							</Period>
-							<Condition>delay</Condition>
+
 							<!-- Simulation of SEV by a DELAY for the SEV-area -->
 							<Condition>replacementRide</Condition>
-							<Condition>matchingBoth</Condition>
-							<!-- special handling for the case the trip starts before
-									and ends after the disrupped portion -->
+							<!-- special handling for the case the trip starts 
+									outside the disrupped portion but ends inside -->
 							<Affects>
 								<Networks>
 									<AffectedNetwork>
@@ -449,15 +109,6 @@
 											</AffectedOperator>
 											<LineRef>HHA-U:U1_HHA-U</LineRef>
 											<PublishedLineName xml:lang="DE">U1</PublishedLineName>
-											<!-- in both directions  -->
-											<Direction>
-												<DirectionRef>1</DirectionRef>
-												<DirectionName>Großhansdorf</DirectionName>
-											</Direction>
-											<Direction>
-												<DirectionRef>1</DirectionRef>
-												<DirectionName>Ohlstedt</DirectionName>
-											</Direction>
 											<Direction>
 												<DirectionRef>6</DirectionRef>
 												<DirectionName>Norderstedt Mitte</DirectionName>
@@ -485,27 +136,61 @@
 									</AffectedNetwork>
 								</Networks>
 							</Affects>
+							<Advice>
+								<Details xml:lang="DE">Der SEV hält an der regulären Bus-Haltestelle am jeweiligen U-Bahnhof.</Details>
+							</Advice>
 							<Blocking>
 								<JourneyPlanner>true</JourneyPlanner>
 								<!-- handle replacementRide (SEV) in Journey Planner -->
 								<RealTime>true</RealTime>
 								<!-- this blocks the real-time for the U1, which tells, 
-									 it would run all the way (but the trip ends in between) -->
+									 it would run all the way (but ends the trip in Hauptbahnhof Süd) -->
 							</Blocking>
-							<Delays>
-								<DelayType>delays</DelayType>
-								<Delay>PT35M</Delay>	<!-- 35 Minutes intotal -->
-							</Delays>
+							<ReplacementRideStops>
+								<ReplacementRideStop>
+									<AffectedStopPoint>
+										<StopPointRef>de:02000:10906</StopPointRef>
+										<StopPointName xml:lang="DE">Hauptbahnhof Süd</StopPointName>
+									</AffectedStopPoint>
+									<CheckInTime>PT10M</CheckInTime>
+									<!-- 10 minutes for the change to SEV-->
+								</ReplacementRideStop>
+								<ReplacementRideStop>
+									<AffectedStopPoint>
+										<StopPointRef>de:02000:10907</StopPointRef>
+										<StopPointName xml:lang="DE">Steinstraße</StopPointName>
+									</AffectedStopPoint>
+									<ArrivalTravelProlongation>PT5M</ArrivalTravelProlongation>
+									<DepartureTravelProlongation>PT5M</DepartureTravelProlongation>
+								</ReplacementRideStop>
+								<ReplacementRideStop>
+									<AffectedStopPoint>
+										<StopPointRef>de:02000:11903</StopPointRef>
+										<StopPointName xml:lang="DE">Meßberg</StopPointName>
+									</AffectedStopPoint>
+									<ArrivalTravelProlongation>PT10M</ArrivalTravelProlongation>
+									<DepartureTravelProlongation>PT10M</DepartureTravelProlongation>
+								</ReplacementRideStop>
+								<ReplacementRideStop>
+									<AffectedStopPoint>
+										<StopPointRef>de:02000:11950</StopPointRef>
+										<StopPointName xml:lang="DE">Jungfernstieg</StopPointName>
+									</AffectedStopPoint>
+									<CheckOutTime>PT10M</CheckOutTime>
+									<!-- 10 minutes for the change to SEV-->
+								</ReplacementRideStop>
+							</ReplacementRideStops>
 						</Consequence>
-						<Consequence>		<!-- noMatchingInside SEV -->
+						<Consequence>
+							<!-- FORMER matchingInto SEV Ri 1 -->
 							<Period>
 								<StartTime>2020-10-01T13:45:00+02:00</StartTime>
 								<EndTime>2020-10-01T16:00:00+02:00</EndTime>
 							</Period>
+							<!-- Simulation of SEV by a DELAY and an INCREMENT_DELAY for the SEV-area -->
 							<Condition>replacementRide</Condition>
-							<Condition>noMatchingInside</Condition>
 							<!-- special handling for the case the trip starts 
-									and ends without touching the disrupped portion -->
+									outside the disrupped portion but ends inside -->
 							<Affects>
 								<Networks>
 									<AffectedNetwork>
@@ -515,7 +200,6 @@
 											</AffectedOperator>
 											<LineRef>HHA-U:U1_HHA-U</LineRef>
 											<PublishedLineName xml:lang="DE">U1</PublishedLineName>
-											<!-- in both directions  -->
 											<Direction>
 												<DirectionRef>1</DirectionRef>
 												<DirectionName>Großhansdorf</DirectionName>
@@ -524,30 +208,73 @@
 												<DirectionRef>1</DirectionRef>
 												<DirectionName>Ohlstedt</DirectionName>
 											</Direction>
-											<Direction>
-												<DirectionRef>6</DirectionRef>
-												<DirectionName>Norderstedt Mitte</DirectionName>
-											</Direction>
 											<StopPoints>
-												<!-- the portion between Steinstraße and Meßberg is affected by the delay  -->
+												<!-- the portion between Hauptbahnhof Süd and Jungfernstieg is affected by the delay  -->
+												<AffectedStopPoint>
+													<StopPointRef>de:02000:11950</StopPointRef>
+													<StopPointName xml:lang="DE">Jungfernstieg</StopPointName>
+												</AffectedStopPoint>
+												<AffectedStopPoint>
+													<StopPointRef>de:02000:11903</StopPointRef>
+													<StopPointName xml:lang="DE">Meßberg</StopPointName>
+												</AffectedStopPoint>
 												<AffectedStopPoint>
 													<StopPointRef>de:02000:10907</StopPointRef>
 													<StopPointName xml:lang="DE">Steinstraße</StopPointName>
 												</AffectedStopPoint>
 												<AffectedStopPoint>
-													<StopPointRef>de:02000:11903</StopPointRef>
-													<StopPointName xml:lang="DE">Meßberg</StopPointName>
+													<StopPointRef>de:02000:10906</StopPointRef>
+													<StopPointName xml:lang="DE">Hauptbahnhof Süd</StopPointName>
 												</AffectedStopPoint>
 											</StopPoints>
 										</AffectedLine>
 									</AffectedNetwork>
 								</Networks>
 							</Affects>
+							<Advice>
+								<Details xml:lang="DE">Der SEV hält an der regulären Bus-Haltestelle am jeweiligen U-Bahnhof.</Details>
+							</Advice>
 							<Blocking>
-								<!-- nothing blocked for the area outside the SEV -->
-								<JourneyPlanner>false</JourneyPlanner>
-								<RealTime>false</RealTime>
+								<JourneyPlanner>true</JourneyPlanner>
+								<!-- handle replacementRide (SEV) in Journey Planner -->
+								<RealTime>true</RealTime>
+								<!-- this blocks the real-time for the U1, which tells, 
+									 it would run all the way (but ends the trip in Hauptbahnhof Süd) -->
 							</Blocking>
+							<ReplacementRideStops>
+								<ReplacementRideStop>
+									<AffectedStopPoint>
+										<StopPointRef>de:02000:11950</StopPointRef>
+										<StopPointName xml:lang="DE">Jungfernstieg</StopPointName>
+									</AffectedStopPoint>
+									<CheckInTime>PT10M</CheckInTime>
+									<!-- 10 minutes for the change to SEV-->
+								</ReplacementRideStop>
+								<ReplacementRideStop>
+									<AffectedStopPoint>
+										<StopPointRef>de:02000:11903</StopPointRef>
+										<StopPointName xml:lang="DE">Meßberg</StopPointName>
+									</AffectedStopPoint>
+									<ArrivalTravelProlongation>PT5M</ArrivalTravelProlongation>
+									<DepartureTravelProlongation>PT5M</DepartureTravelProlongation>
+								</ReplacementRideStop>
+								<ReplacementRideStop>
+									<AffectedStopPoint>
+										<StopPointRef>de:02000:10907</StopPointRef>
+										<StopPointName xml:lang="DE">Steinstraße</StopPointName>
+									</AffectedStopPoint>
+									<ArrivalTravelProlongation>PT10M</ArrivalTravelProlongation>
+									<DepartureTravelProlongation>PT10M</DepartureTravelProlongation>
+								</ReplacementRideStop>
+								<ReplacementRideStop>
+									<AffectedStopPoint>
+										<StopPointRef>de:02000:10906</StopPointRef>
+										<StopPointName xml:lang="DE">Hauptbahnhof Süd</StopPointName>
+									</AffectedStopPoint>
+									<CheckOutTime>PT10M</CheckOutTime>
+									<!-- 10 minutes for the change to SEV-->
+								</ReplacementRideStop>
+							</ReplacementRideStops>
 						</Consequence>
 					</Consequences>
 					<PublishingActions>
@@ -723,10 +450,10 @@
 								</TextualContent>
 							</PassengerInformationAction>
 						</PublishingAction>
-						<PublishingAction>	<!-- matchingInto SEV Ri 6 -->
+						<PublishingAction>	<!-- Former matchingInto SEV Ri 6 -->
 							<PublishAtScope>
 								<ScopeType>line</ScopeType>
-								<Condition>matchingInto</Condition>
+								<Condition>snippetsAtStops</Condition>
 								<!-- special handling for the case the trip starts outside 
 										the disrupped portion but ends inside -->
 								<Affects>
@@ -742,6 +469,10 @@
 												</Direction>
 												<StopPlaces>
 													<AffectedStopPlace>
+														<StopPlaceRef>de:02000:10906</StopPlaceRef>
+														<PlaceName xml:lang="DE">Hauptbahnhof Süd</PlaceName>
+													</AffectedStopPlace>
+													<AffectedStopPlace>
 														<StopPlaceRef>de:02000:10907</StopPlaceRef>
 														<PlaceName xml:lang="DE">Steinstraße</PlaceName>
 													</AffectedStopPlace>
@@ -768,6 +499,38 @@
 								<RecordedAtTime>2020-10-01T13:09:00+02:00</RecordedAtTime>
 								<SourceRef>Hochbahn_U_MES_Disponent</SourceRef>
 								<Perspective>journeyPlanner</Perspective>
+								<SnippetsAtStops>
+									<SnippetAtStop>
+										<AffectedStopPoint>
+											<StopPointRef>de:02000:10906</StopPointRef>
+											<StopPointName xml:lang="DE">Hauptbahnhof Süd</StopPointName>
+										</AffectedStopPoint>
+									</SnippetAtStop>
+									<SnippetAtStop>
+										<AffectedStopPoint>
+											<StopPointRef>de:02000:10907</StopPointRef>
+											<StopPointName xml:lang="DE">Steinstraße</StopPointName>
+										</AffectedStopPoint>
+										<ArrivalSnippet xml:lang="DE">ca. 15 Min. später</ArrivalSnippet>
+										<DepartureSnippet xml:lang="DE">ca. 15 Min. später</DepartureSnippet>
+									</SnippetAtStop>
+									<SnippetAtStop>
+										<AffectedStopPoint>
+											<StopPointRef>de:02000:11903</StopPointRef>
+											<StopPointName xml:lang="DE">Meßberg</StopPointName>
+										</AffectedStopPoint>
+										<ArrivalSnippet xml:lang="DE">ca. 20 Min. später</ArrivalSnippet>
+										<DepartureSnippet xml:lang="DE">ca. 20 Min. später</DepartureSnippet>
+									</SnippetAtStop>
+									<SnippetAtStop>
+										<AffectedStopPoint>
+											<StopPointRef>de:02000:11950</StopPointRef>
+											<StopPointName xml:lang="DE">Jungfernstieg</StopPointName>
+										</AffectedStopPoint>
+										<ArrivalSnippet xml:lang="DE">ca. 25 Min. später</ArrivalSnippet>
+										<DepartureSnippet xml:lang="DE">ca. 35 Min. später</DepartureSnippet>
+									</SnippetAtStop>
+								</SnippetsAtStops>
 								<TextualContent>
 									<TextualContentSize>medium</TextualContentSize>
 									<SummaryContent>
@@ -777,7 +540,7 @@
 										<DescriptionText xml:lang="DE">Wegen eines Poilzei-Einsatzes 
 													ist derzeit keine Beförderung zwischen Hauptbahnhof Süd und Jungfernstieg 
 													in beiden Richtungen möglich. SEV ist eingerichtet, 
-													Verlängerung der Fahrzeit 15 bis 25 Min.</DescriptionText>
+													Verlängerung der Fahrzeit </DescriptionText>
 									</DescriptionContent>
 								</TextualContent>
 								<TextualContent>
@@ -787,15 +550,15 @@
 									</SummaryContent>
 									<DescriptionContent>
 										<DescriptionText xml:lang="DE">SEV ist eingerichtet, 
-													Verzögerung 15 bis 25 Min.</DescriptionText>
+													Verzögerung </DescriptionText>
 									</DescriptionContent>
 								</TextualContent>
 							</PassengerInformationAction>
 						</PublishingAction>
-						<PublishingAction>	<!-- matchingInto SEV Ri 1 -->
+						<PublishingAction>	<!-- Former matchingInto SEV Ri 1 -->
 							<PublishAtScope>
 								<ScopeType>line</ScopeType>
-								<Condition>matchingInto</Condition>
+								<Condition>snippetsAtStops</Condition>
 								<!-- special handling for the case the trip starts outside 
 										the disrupped portion but ends inside -->
 								<Affects>
@@ -815,241 +578,21 @@
 												</Direction>
 												<StopPlaces>
 													<AffectedStopPlace>
-														<StopPlaceRef>de:02000:10906</StopPlaceRef>
-														<PlaceName xml:lang="DE">Hauptbahnhof Süd</PlaceName>
-													</AffectedStopPlace>
-													<AffectedStopPlace>
-														<StopPlaceRef>de:02000:10907</StopPlaceRef>
-														<PlaceName xml:lang="DE">Steinstraße</PlaceName>
-													</AffectedStopPlace>
-													<AffectedStopPlace>
-														<StopPlaceRef>de:02000:11903</StopPlaceRef>
-														<PlaceName xml:lang="DE">Meßberg</PlaceName>
-													</AffectedStopPlace>
-												</StopPlaces>
-											</AffectedLine>
-										</AffectedNetwork>
-									</Networks>
-								</Affects>
-							</PublishAtScope>
-							<PassengerInformationAction>
-								<PublicationWindow>
-									<StartTime>2020-10-01T13:45:00+02:00</StartTime>
-									<EndTime>2020-10-01T16:00:00+02:00</EndTime>
-								</PublicationWindow>
-								<ActionRef/>
-								<RecordedAtTime>2020-10-01T13:09:00+02:00</RecordedAtTime>
-								<SourceRef>Hochbahn_U_MES_Disponent</SourceRef>
-								<Perspective>journeyPlanner</Perspective>
-								<TextualContent>
-									<TextualContentSize>medium</TextualContentSize>
-									<SummaryContent>
-										<SummaryText xml:lang="DE">U1 Streckensperrung Hauptbahnhof Süd - Jungfernstieg</SummaryText>
-									</SummaryContent>
-									<DescriptionContent>
-										<DescriptionText xml:lang="DE">Wegen eines Poilzei-Einsatzes 
-													ist derzeit keine Beförderung zwischen Hauptbahnhof Süd und Jungfernstieg 
-													in beiden Richtungen möglich. SEV ist eingerichtet, 
-													Verlängerung der Fahrzeit 15 bis 25 Min.</DescriptionText>
-									</DescriptionContent>
-								</TextualContent>
-								<TextualContent>
-									<TextualContentSize>small</TextualContentSize>
-									<SummaryContent>
-										<SummaryText xml:lang="DE">U1 Streckensperrung Hauptbahnhof Süd - Jungfernstieg</SummaryText>
-									</SummaryContent>
-									<DescriptionContent>
-										<DescriptionText xml:lang="DE">SEV ist eingerichtet, 
-													Verzögerung 15 bis 25 Min.</DescriptionText>
-									</DescriptionContent>
-								</TextualContent>
-							</PassengerInformationAction>
-						</PublishingAction>
-						<PublishingAction>	<!-- matchingFrom SEV Ri 1 -->
-							<PublishAtScope>
-								<ScopeType>line</ScopeType>
-								<Condition>matchingFrom</Condition>
-								<!-- special handling for the case the trip starts inside 
-										the disrupped portion but ends outside -->
-								<Affects>
-									<Networks>
-										<AffectedNetwork>
-											<NetworkRef>HHA-U</NetworkRef>
-											<AffectedLine>
-												<LineRef>HHA-U:U1_HHA-U</LineRef>
-												<PublishedLineName xml:lang="DE">U1</PublishedLineName>
-												<Direction>
-													<DirectionRef>1</DirectionRef>
-													<DirectionName>Großhansdorf</DirectionName>
-												</Direction>
-												<Direction>
-													<DirectionRef>1</DirectionRef>
-													<DirectionName>Ohlstedt</DirectionName>
-												</Direction>
-												<StopPlaces>
-													<AffectedStopPlace>
-														<StopPlaceRef>de:02000:10907</StopPlaceRef>
-														<PlaceName xml:lang="DE">Steinstraße</PlaceName>
-													</AffectedStopPlace>
-													<AffectedStopPlace>
-														<StopPlaceRef>de:02000:11903</StopPlaceRef>
-														<PlaceName xml:lang="DE">Meßberg</PlaceName>
-													</AffectedStopPlace>
-													<AffectedStopPlace>
 														<StopPlaceRef>de:02000:11950</StopPlaceRef>
 														<PlaceName xml:lang="DE">Jungfernstieg</PlaceName>
 													</AffectedStopPlace>
-												</StopPlaces>
-											</AffectedLine>
-										</AffectedNetwork>
-									</Networks>
-								</Affects>
-							</PublishAtScope>
-							<PassengerInformationAction>
-								<PublicationWindow>
-									<StartTime>2020-10-01T13:45:00+02:00</StartTime>
-									<EndTime>2020-10-01T16:00:00+02:00</EndTime>
-								</PublicationWindow>
-								<ActionRef/>
-								<RecordedAtTime>2020-10-01T13:09:00+02:00</RecordedAtTime>
-								<SourceRef>Hochbahn_U_MES_Disponent</SourceRef>
-								<Perspective>journeyPlanner</Perspective>
-								<TextualContent>
-									<TextualContentSize>medium</TextualContentSize>
-									<SummaryContent>
-										<SummaryText xml:lang="DE">U1 Streckensperrung Hauptbahnhof Süd - Jungfernstieg</SummaryText>
-									</SummaryContent>
-									<DescriptionContent>
-										<DescriptionText xml:lang="DE">Wegen eines Poilzei-Einsatzes 
-													ist derzeit keine Beförderung zwischen Hauptbahnhof Süd und Jungfernstieg 
-													in beiden Richtungen möglich. SEV ist eingerichtet, 
-													Verlängerung der Fahrzeit 15 bis 25 Min.</DescriptionText>
-									</DescriptionContent>
-								</TextualContent>
-								<TextualContent>
-									<TextualContentSize>small</TextualContentSize>
-									<SummaryContent>
-										<SummaryText xml:lang="DE">U1 Streckensperrung Hauptbahnhof Süd - Jungfernstieg</SummaryText>
-									</SummaryContent>
-									<DescriptionContent>
-										<DescriptionText xml:lang="DE">SEV ist eingerichtet, 
-													Verzögerung 15 bis 25 Min.</DescriptionText>
-									</DescriptionContent>
-								</TextualContent>
-							</PassengerInformationAction>
-						</PublishingAction>
-						<PublishingAction>	<!-- matchingFrom SEV Ri 6 -->
-							<PublishAtScope>
-								<ScopeType>line</ScopeType>
-								<Condition>matchingFrom</Condition>
-								<!-- special handling for the case the trip starts inside 
-										the disrupped portion but ends outside -->
-								<Affects>
-									<Networks>
-										<AffectedNetwork>
-											<NetworkRef>HHA-U</NetworkRef>
-											<AffectedLine>
-												<LineRef>HHA-U:U1_HHA-U</LineRef>
-												<PublishedLineName xml:lang="DE">U1</PublishedLineName>
-												<Direction>
-													<DirectionRef>6</DirectionRef>
-													<DirectionName>Norderstedt Mitte</DirectionName>
-												</Direction>
-												<StopPlaces>
 													<AffectedStopPlace>
-														<StopPlaceRef>de:02000:10906</StopPlaceRef>
-														<PlaceName xml:lang="DE">Hauptbahnhof Süd</PlaceName>
+														<StopPlaceRef>de:02000:11903</StopPlaceRef>
+														<PlaceName xml:lang="DE">Meßberg</PlaceName>
 													</AffectedStopPlace>
 													<AffectedStopPlace>
 														<StopPlaceRef>de:02000:10907</StopPlaceRef>
 														<PlaceName xml:lang="DE">Steinstraße</PlaceName>
 													</AffectedStopPlace>
 													<AffectedStopPlace>
-														<StopPlaceRef>de:02000:11903</StopPlaceRef>
-														<PlaceName xml:lang="DE">Meßberg</PlaceName>
-													</AffectedStopPlace>
-												</StopPlaces>
-											</AffectedLine>
-										</AffectedNetwork>
-									</Networks>
-								</Affects>
-							</PublishAtScope>
-							<PassengerInformationAction>
-								<PublicationWindow>
-									<StartTime>2020-10-01T13:45:00+02:00</StartTime>
-									<EndTime>2020-10-01T16:00:00+02:00</EndTime>
-								</PublicationWindow>
-								<ActionRef/>
-								<RecordedAtTime>2020-10-01T13:09:00+02:00</RecordedAtTime>
-								<SourceRef>Hochbahn_U_MES_Disponent</SourceRef>
-								<Perspective>journeyPlanner</Perspective>
-								<TextualContent>
-									<TextualContentSize>medium</TextualContentSize>
-									<SummaryContent>
-										<SummaryText xml:lang="DE">U1 Streckensperrung Hauptbahnhof Süd - Jungfernstieg</SummaryText>
-									</SummaryContent>
-									<DescriptionContent>
-										<DescriptionText xml:lang="DE">Wegen eines Poilzei-Einsatzes 
-													ist derzeit keine Beförderung zwischen Hauptbahnhof Süd und Jungfernstieg 
-													in beiden Richtungen möglich. SEV ist eingerichtet, 
-													Verlängerung der Fahrzeit 15 bis 25 Min.</DescriptionText>
-									</DescriptionContent>
-								</TextualContent>
-								<TextualContent>
-									<TextualContentSize>small</TextualContentSize>
-									<SummaryContent>
-										<SummaryText xml:lang="DE">U1 Streckensperrung Hauptbahnhof Süd - Jungfernstieg</SummaryText>
-									</SummaryContent>
-									<DescriptionContent>
-										<DescriptionText xml:lang="DE">SEV ist eingerichtet, 
-													Verzögerung 15 bis 25 Min.</DescriptionText>
-									</DescriptionContent>
-								</TextualContent>
-							</PassengerInformationAction>
-						</PublishingAction>
-						<PublishingAction>	<!-- matchingInsideOnly SEV -->
-							<PublishAtScope>
-								<ScopeType>line</ScopeType>
-								<Condition>matchingInsideOnly</Condition>
-								<!-- special handling for the case the trip starts 
-										and ends inside the disrupped portion  -->
-								<Affects>
-									<Networks>
-										<AffectedNetwork>
-											<NetworkRef>HHA-U</NetworkRef>
-											<AffectedLine>
-												<LineRef>HHA-U:U1_HHA-U</LineRef>
-												<PublishedLineName xml:lang="DE">U1</PublishedLineName>
-												<!-- in both directions  -->
-												<Direction>
-													<DirectionRef>1</DirectionRef>
-													<DirectionName>Großhansdorf</DirectionName>
-												</Direction>
-												<Direction>
-													<DirectionRef>1</DirectionRef>
-													<DirectionName>Ohlstedt</DirectionName>
-												</Direction>
-												<Direction>
-													<DirectionRef>6</DirectionRef>
-													<DirectionName>Norderstedt Mitte</DirectionName>
-												</Direction>
-												<StopPlaces>
-													<AffectedStopPlace>
 														<StopPlaceRef>de:02000:10906</StopPlaceRef>
 														<PlaceName xml:lang="DE">Hauptbahnhof Süd</PlaceName>
 													</AffectedStopPlace>
-													<AffectedStopPlace>
-														<StopPlaceRef>de:02000:10907</StopPlaceRef>
-														<PlaceName xml:lang="DE">Steinstraße</PlaceName>
-													</AffectedStopPlace>
-													<AffectedStopPlace>
-														<StopPlaceRef>de:02000:11903</StopPlaceRef>
-														<PlaceName xml:lang="DE">Meßberg</PlaceName>
-													</AffectedStopPlace>
-													<AffectedStopPlace>
-														<StopPlaceRef>de:02000:11950</StopPlaceRef>
-														<PlaceName xml:lang="DE">Jungfernstieg</PlaceName>
-													</AffectedStopPlace>
 												</StopPlaces>
 											</AffectedLine>
 										</AffectedNetwork>
@@ -1065,6 +608,38 @@
 								<RecordedAtTime>2020-10-01T13:09:00+02:00</RecordedAtTime>
 								<SourceRef>Hochbahn_U_MES_Disponent</SourceRef>
 								<Perspective>journeyPlanner</Perspective>
+								<SnippetsAtStops>
+									<SnippetAtStop>
+										<AffectedStopPoint>
+											<StopPointRef>de:02000:11950</StopPointRef>
+											<StopPointName xml:lang="DE">Jungfernstieg</StopPointName>
+										</AffectedStopPoint>
+									</SnippetAtStop>
+									<SnippetAtStop>
+										<AffectedStopPoint>
+											<StopPointRef>de:02000:11903</StopPointRef>
+											<StopPointName xml:lang="DE">Meßberg</StopPointName>
+										</AffectedStopPoint>
+										<ArrivalSnippet xml:lang="DE">ca. 15 Min. später</ArrivalSnippet>
+										<DepartureSnippet xml:lang="DE">ca. 15 Min. später</DepartureSnippet>
+									</SnippetAtStop>
+									<SnippetAtStop>
+										<AffectedStopPoint>
+											<StopPointRef>de:02000:10907</StopPointRef>
+											<StopPointName xml:lang="DE">Steinstraße</StopPointName>
+										</AffectedStopPoint>
+										<ArrivalSnippet xml:lang="DE">ca. 20 Min. später</ArrivalSnippet>
+										<DepartureSnippet xml:lang="DE">ca. 20 Min. später</DepartureSnippet>
+									</SnippetAtStop>
+									<SnippetAtStop>
+										<AffectedStopPoint>
+											<StopPointRef>de:02000:10906</StopPointRef>
+											<StopPointName xml:lang="DE">Hauptbahnhof Süd</StopPointName>
+										</AffectedStopPoint>
+										<ArrivalSnippet xml:lang="DE">ca. 25 Min. später</ArrivalSnippet>
+										<DepartureSnippet xml:lang="DE">ca. 35 Min. später</DepartureSnippet>
+									</SnippetAtStop>
+								</SnippetsAtStops>
 								<TextualContent>
 									<TextualContentSize>medium</TextualContentSize>
 									<SummaryContent>
@@ -1074,7 +649,7 @@
 										<DescriptionText xml:lang="DE">Wegen eines Poilzei-Einsatzes 
 													ist derzeit keine Beförderung zwischen Hauptbahnhof Süd und Jungfernstieg 
 													in beiden Richtungen möglich. SEV ist eingerichtet, 
-													Verlängerung der Fahrzeit 5 bis 15 Min.</DescriptionText>
+													Verlängerung der Fahrzeit </DescriptionText>
 									</DescriptionContent>
 								</TextualContent>
 								<TextualContent>
@@ -1084,89 +659,7 @@
 									</SummaryContent>
 									<DescriptionContent>
 										<DescriptionText xml:lang="DE">SEV ist eingerichtet, 
-													Verzögerung 5 bis 15 Min.</DescriptionText>
-									</DescriptionContent>
-								</TextualContent>
-							</PassengerInformationAction>
-						</PublishingAction>
-						<PublishingAction>	<!-- matchingBoth SEV -->
-							<PublishAtScope>
-								<ScopeType>line</ScopeType>
-								<Condition>matchingBoth</Condition>
-								<!-- special handling for the case the trip starts before 
-										and ends after the disrupped portion  -->
-								<Affects>
-									<Networks>
-										<AffectedNetwork>
-											<NetworkRef>HHA-U</NetworkRef>
-											<AffectedLine>
-												<LineRef>HHA-U:U1_HHA-U</LineRef>
-												<PublishedLineName xml:lang="DE">U1</PublishedLineName>
-												<!-- in both directions  -->
-												<Direction>
-													<DirectionRef>1</DirectionRef>
-													<DirectionName>Großhansdorf</DirectionName>
-												</Direction>
-												<Direction>
-													<DirectionRef>1</DirectionRef>
-													<DirectionName>Ohlstedt</DirectionName>
-												</Direction>
-												<Direction>
-													<DirectionRef>6</DirectionRef>
-													<DirectionName>Norderstedt Mitte</DirectionName>
-												</Direction>
-												<StopPlaces>
-													<AffectedStopPlace>
-														<StopPlaceRef>de:02000:10906</StopPlaceRef>
-														<PlaceName xml:lang="DE">Hauptbahnhof Süd</PlaceName>
-													</AffectedStopPlace>
-													<AffectedStopPlace>
-														<StopPlaceRef>de:02000:10907</StopPlaceRef>
-														<PlaceName xml:lang="DE">Steinstraße</PlaceName>
-													</AffectedStopPlace>
-													<AffectedStopPlace>
-														<StopPlaceRef>de:02000:11903</StopPlaceRef>
-														<PlaceName xml:lang="DE">Meßberg</PlaceName>
-													</AffectedStopPlace>
-													<AffectedStopPlace>
-														<StopPlaceRef>de:02000:11950</StopPlaceRef>
-														<PlaceName xml:lang="DE">Jungfernstieg</PlaceName>
-													</AffectedStopPlace>
-												</StopPlaces>
-											</AffectedLine>
-										</AffectedNetwork>
-									</Networks>
-								</Affects>
-							</PublishAtScope>
-							<PassengerInformationAction>
-								<PublicationWindow>
-									<StartTime>2020-10-01T13:45:00+02:00</StartTime>
-									<EndTime>2020-10-01T16:00:00+02:00</EndTime>
-								</PublicationWindow>
-								<ActionRef/>
-								<RecordedAtTime>2020-10-01T13:09:00+02:00</RecordedAtTime>
-								<SourceRef>Hochbahn_U_MES_Disponent</SourceRef>
-								<Perspective>journeyPlanner</Perspective>
-								<TextualContent>
-									<TextualContentSize>medium</TextualContentSize>
-									<SummaryContent>
-										<SummaryText xml:lang="DE">U1 Streckensperrung Hauptbahnhof Süd - Jungfernstieg</SummaryText>
-									</SummaryContent>
-									<DescriptionContent>
-										<DescriptionText xml:lang="DE">Wegen eines Poilzei-Einsatzes 
-													ist derzeit keine Beförderung zwischen Hauptbahnhof Süd und Jungfernstieg 
-													in beiden Richtungen möglich. SEV ist eingerichtet, 
-													Verlängerung der Fahrzeit ca. 35 Min.</DescriptionText>
-									</DescriptionContent>
-								</TextualContent>
-								<TextualContent>
-									<TextualContentSize>small</TextualContentSize>
-									<SummaryContent>
-										<SummaryText xml:lang="DE">U1 Streckensperrung Hauptbahnhof Süd - Jungfernstieg</SummaryText>
-									</SummaryContent>
-									<DescriptionContent>
-										<DescriptionText xml:lang="DE">SEV ist eingerichtet, 
-													Verzögerung ca. 35  Min.</DescriptionText>
+													Verzögerung </DescriptionText>
 									</DescriptionContent>
 								</TextualContent>
 							</PassengerInformationAction>

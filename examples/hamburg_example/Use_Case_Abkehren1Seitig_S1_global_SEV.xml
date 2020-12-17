@@ -590,6 +590,7 @@
 							<!-- FORMER matchingFrom SEV -->
 							<PublishAtScope>
 								<ScopeType>line</ScopeType>
+                                <Condition>snippetsAtStops</Condition>
 								<!-- special handling for the case the trip starts inside 
 										the disrupped portion but ends outside -->
 								<Affects>
