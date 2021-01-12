@@ -114,7 +114,7 @@ Rail transport, Roads and road transport
  <!-- ======================================================================= -->
  <xsd:element name="VehicleMode" type="VehicleModesOfTransportEnumeration" default="unknown">
   <xsd:annotation>
-   <xsd:documentation>Vehicle mode- Tpeg ModeType pti1.</xsd:documentation>
+   <xsd:documentation>Vehicle mode- TPEG PTS001 ModeOfTransport</xsd:documentation>
   </xsd:annotation>
  </xsd:element>
  <xsd:simpleType name="VehicleModesOfTransportEnumeration">
@@ -122,123 +122,8 @@ Rail transport, Roads and road transport
    <xsd:documentation>Values for ModesOfTransport : TPEG PTS001 ModeOfTransport</xsd:documentation>
   </xsd:annotation>
   <xsd:restriction base="xsd:NMTOKEN">
-   <xsd:enumeration value="pti1_0">
-    <xsd:annotation>
-     <xsd:documentation>DEPRECATED since SIRI 2.1</xsd:documentation>
-    </xsd:annotation>
-   </xsd:enumeration>
-   <xsd:enumeration value="pti1_1">
-    <xsd:annotation>
-     <xsd:documentation>DEPRECATED since SIRI 2.1</xsd:documentation>
-    </xsd:annotation>
-   </xsd:enumeration>
-   <xsd:enumeration value="pti1_10">
-    <xsd:annotation>
-     <xsd:documentation>DEPRECATED since SIRI 2.1</xsd:documentation>
-    </xsd:annotation>
-   </xsd:enumeration>
-   <xsd:enumeration value="pti1_11">
-    <xsd:annotation>
-     <xsd:documentation>DEPRECATED since SIRI 2.1</xsd:documentation>
-    </xsd:annotation>
-   </xsd:enumeration>
-   <xsd:enumeration value="pti1_12">
-    <xsd:annotation>
-     <xsd:documentation>DEPRECATED since SIRI 2.1</xsd:documentation>
-    </xsd:annotation>
-   </xsd:enumeration>
-   <xsd:enumeration value="pti1_13">
-    <xsd:annotation>
-     <xsd:documentation>DEPRECATED since SIRI 2.1</xsd:documentation>
-    </xsd:annotation>
-   </xsd:enumeration>
-   <xsd:enumeration value="pti1_14">
-    <xsd:annotation>
-     <xsd:documentation>DEPRECATED since SIRI 2.1</xsd:documentation>
-    </xsd:annotation>
-   </xsd:enumeration>
-   <xsd:enumeration value="pti1_15">
-    <xsd:annotation>
-     <xsd:documentation>DEPRECATED since SIRI 2.1</xsd:documentation>
-    </xsd:annotation>
-   </xsd:enumeration>
-   <xsd:enumeration value="pti1_17">
-    <xsd:annotation>
-     <xsd:documentation>DEPRECATED since SIRI 2.1</xsd:documentation>
-    </xsd:annotation>
-   </xsd:enumeration>
-   <xsd:enumeration value="pti1_18">
-    <xsd:annotation>
-     <xsd:documentation>DEPRECATED since SIRI 2.1</xsd:documentation>
-    </xsd:annotation>
-   </xsd:enumeration>
-   <xsd:enumeration value="pti1_2">
-    <xsd:annotation>
-     <xsd:documentation>DEPRECATED since SIRI 2.1</xsd:documentation>
-    </xsd:annotation>
-   </xsd:enumeration>
-   <xsd:enumeration value="pti1_3">
-    <xsd:annotation>
-     <xsd:documentation>DEPRECATED since SIRI 2.1</xsd:documentation>
-    </xsd:annotation>
-   </xsd:enumeration>
-   <xsd:enumeration value="pti1_4">
-    <xsd:annotation>
-     <xsd:documentation>DEPRECATED since SIRI 2.1</xsd:documentation>
-    </xsd:annotation>
-   </xsd:enumeration>
-   <xsd:enumeration value="pti1_5">
-    <xsd:annotation>
-     <xsd:documentation>DEPRECATED since SIRI 2.1</xsd:documentation>
-    </xsd:annotation>
-   </xsd:enumeration>
-   <xsd:enumeration value="pti1_6">
-    <xsd:annotation>
-     <xsd:documentation>DEPRECATED since SIRI 2.1</xsd:documentation>
-    </xsd:annotation>
-   </xsd:enumeration>
-   <xsd:enumeration value="pti1_7">
-    <xsd:annotation>
-     <xsd:documentation>DEPRECATED since SIRI 2.1</xsd:documentation>
-    </xsd:annotation>
-   </xsd:enumeration>
-   <xsd:enumeration value="pti1_8">
-    <xsd:annotation>
-     <xsd:documentation>DEPRECATED since SIRI 2.1</xsd:documentation>
-    </xsd:annotation>
-   </xsd:enumeration>
-   <xsd:enumeration value="pti1_9">
-    <xsd:annotation>
-     <xsd:documentation>DEPRECATED since SIRI 2.1</xsd:documentation>
-    </xsd:annotation>
-   </xsd:enumeration>
    <xsd:enumeration value="unknown"/>
-   <xsd:enumeration value="railwayService">
-    <xsd:annotation>
-     <xsd:documentation>Submodes provided in RailSubmodesOfTransportEnumeration (TPEG PTS105)</xsd:documentation>
-    </xsd:annotation>
-   </xsd:enumeration>
-   <xsd:enumeration value="rail">
-     <xsd:annotation>
-      <xsd:documentation>DEPRECATED since SIRI 2.1</xsd:documentation>
-     </xsd:annotation>
-   </xsd:enumeration>
-   <xsd:enumeration value="lightRailwayService">
-    <xsd:annotation>
-     <xsd:documentation>Submodes provided in RailSubmodesOfTransportEnumeration (TPEG PTS105)</xsd:documentation>
-    </xsd:annotation>
-   </xsd:enumeration>
-   <xsd:enumeration value="rackRailService">
-    <xsd:annotation>
-     <xsd:documentation>Submodes provided in RailSubmodesOfTransportEnumeration (TPEG PTS105)</xsd:documentation>
-    </xsd:annotation>
-   </xsd:enumeration>
-   <xsd:enumeration value="coachService">
-   <xsd:annotation>
-    <xsd:documentation>Submodes provided in CoachSubmodesOfTransportEnumeration (TPEG PTS112)</xsd:documentation>
-   </xsd:annotation>
-  </xsd:enumeration>
-   <xsd:enumeration value="airwayService">
+   <xsd:enumeration value="airService">
     <xsd:annotation>
      <xsd:documentation>Submodes provided in AirSubmodesOfTransportEnumeration (TPEG PTS101)</xsd:documentation>
     </xsd:annotation>
@@ -250,13 +135,26 @@ Rail transport, Roads and road transport
    </xsd:enumeration>
    <xsd:enumeration value="chairliftService"/>
    <xsd:enumeration value="elevatorService"/>
-   
+   <xsd:enumeration value="railwayService">
+    <xsd:annotation>
+     <xsd:documentation>Submodes provided in RailSubmodesOfTransportEnumeration (TPEG PTS105)</xsd:documentation>
+    </xsd:annotation>
+   </xsd:enumeration>
    <xsd:enumeration value="urbanRailwayService">
     <xsd:annotation>
      <xsd:documentation>Submodes provided in MetroSubmodesOfTransportEnumeration (TPEG PTS106)</xsd:documentation>
     </xsd:annotation>
    </xsd:enumeration>
-   
+   <xsd:enumeration value="lightRailwayService">
+    <xsd:annotation>
+     <xsd:documentation>Submodes provided in RailSubmodesOfTransportEnumeration (TPEG PTS105)</xsd:documentation>
+    </xsd:annotation>
+   </xsd:enumeration>
+   <xsd:enumeration value="rackRailService">
+    <xsd:annotation>
+     <xsd:documentation>Submodes provided in RailSubmodesOfTransportEnumeration (TPEG PTS105)</xsd:documentation>
+    </xsd:annotation>
+   </xsd:enumeration>
    <xsd:enumeration value="funicularService"/>
    <xsd:enumeration value="busService">
     <xsd:annotation>
@@ -266,6 +164,11 @@ Rail transport, Roads and road transport
    <xsd:enumeration value="trolleybusService">
     <xsd:annotation>
      <xsd:documentation>Submodes provided in BusSubmodesOfTransportEnumeration (TPEG PTS110)</xsd:documentation>
+    </xsd:annotation>
+   </xsd:enumeration>
+   <xsd:enumeration value="coachService">
+    <xsd:annotation>
+     <xsd:documentation>Submodes provided in CoachSubmodesOfTransportEnumeration (TPEG PTS112)</xsd:documentation>
     </xsd:annotation>
    </xsd:enumeration>
    <xsd:enumeration value="taxiService"/>
@@ -294,174 +197,6 @@ Rail transport, Roads and road transport
    <xsd:documentation>Values for Rail ModesOfTransport: TPEG PTS105 RailwayService</xsd:documentation>
   </xsd:annotation>
   <xsd:restriction base="xsd:NMTOKEN">
-   <xsd:enumeration value="pti2_0">
-    <xsd:annotation>
-     <xsd:documentation>DEPRECATED since SIRI 2.1</xsd:documentation>
-    </xsd:annotation>
-   </xsd:enumeration>
-   <xsd:enumeration value="loc13_0">
-    <xsd:annotation>
-     <xsd:documentation>DEPRECATED since SIRI 2.1</xsd:documentation>
-    </xsd:annotation>
-   </xsd:enumeration>
-   <xsd:enumeration value="pti2_1">
-    <xsd:annotation>
-     <xsd:documentation>DEPRECATED since SIRI 2.1</xsd:documentation>
-    </xsd:annotation>
-   </xsd:enumeration>
-   <xsd:enumeration value="pti2_2">
-    <xsd:annotation>
-     <xsd:documentation>DEPRECATED since SIRI 2.1</xsd:documentation>
-    </xsd:annotation>
-   </xsd:enumeration>
-   <xsd:enumeration value="loc13_3">
-    <xsd:annotation>
-     <xsd:documentation>DEPRECATED since SIRI 2.1</xsd:documentation>
-    </xsd:annotation>
-   </xsd:enumeration>
-   <xsd:enumeration value="pti2_3">
-    <xsd:annotation>
-     <xsd:documentation>DEPRECATED since SIRI 2.1</xsd:documentation>
-    </xsd:annotation>
-   </xsd:enumeration>
-   <xsd:enumeration value="loc13_2">
-    <xsd:annotation>
-     <xsd:documentation>DEPRECATED since SIRI 2.1</xsd:documentation>
-    </xsd:annotation>
-   </xsd:enumeration>
-   <xsd:enumeration value="pti2_4">
-    <xsd:annotation>
-     <xsd:documentation>DEPRECATED since SIRI 2.1</xsd:documentation>
-    </xsd:annotation>
-   </xsd:enumeration>
-   <xsd:enumeration value="pti2_5">
-    <xsd:annotation>
-     <xsd:documentation>DEPRECATED since SIRI 2.1</xsd:documentation>
-    </xsd:annotation>
-   </xsd:enumeration>
-   <xsd:enumeration value="pti2_6">
-    <xsd:annotation>
-     <xsd:documentation>DEPRECATED since SIRI 2.1</xsd:documentation>
-    </xsd:annotation>
-   </xsd:enumeration>
-   <xsd:enumeration value="loc13_4">
-    <xsd:annotation>
-     <xsd:documentation>DEPRECATED since SIRI 2.1</xsd:documentation>
-    </xsd:annotation>
-   </xsd:enumeration>
-   <xsd:enumeration value="pti2_7">
-    <xsd:annotation>
-     <xsd:documentation>DEPRECATED since SIRI 2.1</xsd:documentation>
-    </xsd:annotation>
-   </xsd:enumeration>
-   <xsd:enumeration value="loc13_7">
-    <xsd:annotation>
-     <xsd:documentation>DEPRECATED since SIRI 2.1</xsd:documentation>
-    </xsd:annotation>
-   </xsd:enumeration>
-   <xsd:enumeration value="pti2_8">
-    <xsd:annotation>
-     <xsd:documentation>DEPRECATED since SIRI 2.1</xsd:documentation>
-    </xsd:annotation>
-   </xsd:enumeration>
-   <xsd:enumeration value="pti2_9">
-    <xsd:annotation>
-     <xsd:documentation>DEPRECATED since SIRI 2.1</xsd:documentation>
-    </xsd:annotation>
-   </xsd:enumeration>
-   <xsd:enumeration value="loc13_5">
-    <xsd:annotation>
-     <xsd:documentation>DEPRECATED since SIRI 2.1</xsd:documentation>
-    </xsd:annotation>
-   </xsd:enumeration>
-   <xsd:enumeration value="pti2_10">
-    <xsd:annotation>
-     <xsd:documentation>DEPRECATED since SIRI 2.1</xsd:documentation>
-    </xsd:annotation>
-   </xsd:enumeration>
-   <xsd:enumeration value="pti2_11">
-    <xsd:annotation>
-     <xsd:documentation>DEPRECATED since SIRI 2.1</xsd:documentation>
-    </xsd:annotation>
-   </xsd:enumeration>
-   <xsd:enumeration value="pti2_12">
-    <xsd:annotation>
-     <xsd:documentation>DEPRECATED since SIRI 2.1</xsd:documentation>
-    </xsd:annotation>
-   </xsd:enumeration>
-   <xsd:enumeration value="pti2_13">
-    <xsd:annotation>
-     <xsd:documentation>DEPRECATED since SIRI 2.1</xsd:documentation>
-    </xsd:annotation>
-   </xsd:enumeration>
-   <xsd:enumeration value="pti2_14">
-    <xsd:annotation>
-     <xsd:documentation>DEPRECATED since SIRI 2.1</xsd:documentation>
-    </xsd:annotation>
-   </xsd:enumeration>
-   <xsd:enumeration value="pti2_15">
-    <xsd:annotation>
-     <xsd:documentation>DEPRECATED since SIRI 2.1</xsd:documentation>
-    </xsd:annotation>
-   </xsd:enumeration>
-   <xsd:enumeration value="pti2_16">
-    <xsd:annotation>
-     <xsd:documentation>DEPRECATED since SIRI 2.1</xsd:documentation>
-    </xsd:annotation>
-   </xsd:enumeration>
-   <xsd:enumeration value="loc13_8">
-    <xsd:annotation>
-     <xsd:documentation>DEPRECATED since SIRI 2.1</xsd:documentation>
-    </xsd:annotation>
-   </xsd:enumeration>
-   <xsd:enumeration value="pti2_17">
-    <xsd:annotation>
-     <xsd:documentation>DEPRECATED since SIRI 2.1</xsd:documentation>
-    </xsd:annotation>
-   </xsd:enumeration>
-   <xsd:enumeration value="pti2_255">
-    <xsd:annotation>
-     <xsd:documentation>DEPRECATED since SIRI 2.1</xsd:documentation>
-    </xsd:annotation>
-   </xsd:enumeration>
-   <xsd:enumeration value="loc13_6">
-    <xsd:annotation>
-     <xsd:documentation>DEPRECATED since SIRI 2.1</xsd:documentation>
-    </xsd:annotation>
-   </xsd:enumeration>
-   <xsd:enumeration value="loc13_1">
-    <xsd:annotation>
-     <xsd:documentation>DEPRECATED since SIRI 2.1</xsd:documentation>
-    </xsd:annotation>
-   </xsd:enumeration>
-   <xsd:enumeration value="unknown"/>
-   <xsd:enumeration value="undefined"/>
-   <xsd:enumeration value="local" />
-   <xsd:enumeration value="highSpeedRailService"/>
-   <xsd:enumeration value="additionalTrainService"/>
-   <xsd:enumeration value="rackAndPinionRailway"/>
-   <xsd:enumeration value="vehicleRailTransportService"/>
-   <xsd:enumeration value="longDistanceTrain"/>
-   <xsd:enumeration value="interRegionalRailService"/>
-   <xsd:enumeration value="carTransportRailService"/>
-   <xsd:enumeration value="sleeperRailService"/>
-   <xsd:enumeration value="replacementRailService"/>
-   <xsd:enumeration value="suburbanRailway"/>
-   <xsd:enumeration value="railShuttle"/>
-   <xsd:enumeration value="regionalRail"/>
-   <xsd:enumeration value="touristRailway"/>
-   <xsd:enumeration value="crossCountryRailService"/>
-   <xsd:enumeration value="allRailServices"/>
-   <xsd:enumeration value="lorryTransportRailService"/>
-   <xsd:enumeration value="specialTrainService"/>
-   <xsd:enumeration value="international"/>
-   <xsd:enumeration value="interbational">
-    <xsd:annotation>
-     <xsd:documentation>DEPRECATED since SIRI 2.1</xsd:documentation>
-    </xsd:annotation>
-   </xsd:enumeration>
-   <!--UMS-->
-   
    <xsd:enumeration value="unknown"/>
    <xsd:enumeration value="highSpeedRailService"/>
    <xsd:enumeration value="longDistanceInternationalRailService"/>
