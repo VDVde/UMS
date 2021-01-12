@@ -745,7 +745,7 @@ Rail transport, Roads and road transport
   </xsd:annotation>
   <xsd:sequence>
    <xsd:element ref="RequestorRef" minOccurs="0"/>
-   <xsd:element name="MessageRef" type="MessageQualifierStructure" minOccurs="0">
+   <xsd:element name="MessageRef" type="MessageRefStructure" minOccurs="0">
     <xsd:annotation>
      <xsd:documentation>Reference to an arbitrary unique reference associated with the request which gave rise to this response.</xsd:documentation>
     </xsd:annotation>
@@ -767,7 +767,7 @@ Rail transport, Roads and road transport
     <xsd:sequence>
      <xsd:element ref="Extensions" minOccurs="0"/>
     </xsd:sequence>
-    <xsd:attribute name="version" type="VersionString" default="2.1">
+    <xsd:attribute name="version" type="VersionString" default="2.0">
      <xsd:annotation>
       <xsd:documentation>Version number of request.  
 </xsd:documentation>

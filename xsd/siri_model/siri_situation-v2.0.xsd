@@ -7,6 +7,7 @@
  <xsd:import namespace="http://www.ifopt.org.uk/acsb" schemaLocation="../acsb/acsb_accessibility-v0.3.xsd"/>
  <xsd:import namespace="http://www.ifopt.org.uk/ifopt" schemaLocation="../ifopt/ifopt_countries-v0.2.xsd"/>
  <xsd:import namespace="http://datex2.eu/schema/2_0RC1/2_0" schemaLocation="../datex2/DATEXIISchema_2_0RC1_2_0.xsd"/>
+ <xsd:import namespace="http://www.w3.org/XML/1998/namespace" schemaLocation="../xml/xml.xsd"/>
  <!-- ======================================================================= -->
  <xsd:include schemaLocation="siri_situationIdentity-v1.1.xsd"/>
  <xsd:include schemaLocation="siri_situationServiceTypes-v1.0.xsd"/>
@@ -32,39 +33,45 @@
     <Date>
      <Modified>2007-05-14</Modified>
     </Date>
-    <Date><Modified>2008-07-05</Modified>
+    <Date>
+     <Modified>2008-07-05</Modified>
      <!--
        1) correct data type to be participant ref not participant pair.
        2) add missing scopeType to classifier.
 	  -->
-				</Date>
-    <Date><Modified>2011-04-18</Modified>
+    </Date>
+    <Date>
+     <Modified>2011-04-18</Modified>
      <!-- AffectedVehicleJourney should allow multiple journeys. Brian Ferris onebusaway.org -->
-				</Date>
-    <Date><Modified>2012-03-23</Modified>
+    </Date>
+    <Date>
+     <Modified>2012-03-23</Modified>
      <!-- +SIRI v2.0
-					  Use revised 2.0 definitions 
-					  	  Update to use DATEXII V 2.0 schema 
-	  					  Namespace changed from http://datex2.eu/schema/1_0/1_0  to 	http://datex2.eu/schema/2_0RC1/2_0
+       Use revised 2.0 definitions
+       Update to use DATEXII V 2.0 schema
+       Namespace changed from http://datex2.eu/schema/1_0/1_0  to  http://datex2.eu/schema/2_0RC1/2_0
        D2LogicalModel:ReferencePointLinear has been renamed to D2LogicalModel:ReferencePointLinear
        DelayCodeENum renamed to DelayBandEnum
        InformationUsageOverride /  D2LogicalModel:InformationUsage dropped  for  D2
        D2LogicalModel:SourceInformation renamed to   D2LogicalModel:Source
        D2LogicalModel:SourceInformation values wrapped in valuse tag
-       D2LogicalModel:Advcie   dropped.
-       D2LogicalModel:Imppact ImpactDetails wrapper tag dropped.
+       D2LogicalModel:Advice   dropped.
+       D2LogicalModel:Impact ImpactDetails wrapper tag dropped.
        D2 trafficResstrictionType renamed to  trafficConstrictionType
-					   Correct type on easementref to normalized string. 
+       Correct type on easementref to normalized string.
        Allow translations of NLString elements
       -->
-				</Date>
-    <Date><Modified>2013-02-11</Modified>
+    </Date>
+    <Date>
+     <Modified>2013-02-11</Modified>
      <!-- Correction: Certain elements of DescriptionGroup unbounded. -->
-				</Date>
-    <Date><Modified>2013-10-01</Modified>
+    </Date>
+    <Date>
+     <Modified>2013-10-01</Modified>
      <!-- [VDV] Added TpegSubReasonGroup to the ReasonGroup as described in the SX Documentation -->
-        </Date>
-    <Date><Modified>2014-06-20</Modified>
+    </Date>
+    <Date>
+     <Modified>2014-06-20</Modified>
      <!-- [fr] Add additional small delay bands -->
     </Date>
     <Date>

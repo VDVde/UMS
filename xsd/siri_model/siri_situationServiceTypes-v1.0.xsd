@@ -17,7 +17,8 @@
     <Date>
      <Modified>2007-05-14</Modified>
     </Date>
-    <Date><Modified>2007-05-14</Modified>
+    <Date>
+     <Modified>2007-05-14</Modified>
      <!-- [vdv] ReportTypeEnumeration TPEC-code "2_27_1_Alias_2" changed to "27_1_Alias_2" according to recommendation document
           [vdv] ReportTypeEnumeration TPEC-code "2_27_1_Alias_3" changed to "27_1_Alias_3" according to recommendation document
       -->
@@ -28,7 +29,7 @@
        Align with TPEG2 PTS
        Remove numerical values ("Pti25_0") from enumerations
       -->
-				</Date>
+    </Date>
     <Description>
      <p>SIRI-SX is an XML schema for the exchange of structured incidents. This subschema describes service types.</p>
     </Description>
@@ -41,9 +42,8 @@
     <Language>[ISO 639-2/B] ENG</Language>
     <Publisher>CEN</Publisher>
     <Relation>
-
     </Relation>
-    <Rights>Unclassified
+    <Rights><!--Unclassified-->
      <Copyright>Kizoom 2000-2007, CEN 2009-2020</Copyright>
 				</Rights>
     <Source>
@@ -55,20 +55,13 @@
     <Status>Version 2.1</Status>
     <Subject>
      <Category>Arts, recreation and travel, Tourism, Travel (tourism), Transport,
-
 Air transport, Airports,
-
 Ports and maritime transport, Ferries (marine),
-
 Public transport, Bus services, Coach services, Bus stops and stations,
-
 Rail transport, Railway stations and track, Train services, Underground trains,
-
 Business and industry, Transport, Air transport, Ports and maritime transport, Public transport,
-
 Rail transport, Roads and road transport
-
-</Category>
+     </Category>
      <Project>CEN TC278 WG3 SG7</Project>
     </Subject>
     <Title>Xml Schema for PT Incidents. Service subschema</Title>

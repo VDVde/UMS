@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<xsd:schema xmlns="http://www.siri.org.uk/siri" xmlns:xsd="http://www.w3.org/2001/XMLSchema" targetNamespace="http://www.siri.org.uk/siri" elementFormDefault="qualified" attributeFormDefault="unqualified" version="2.1" id="siri_journey_support">
+<xsd:schema xmlns="http://www.siri.org.uk/siri" xmlns:xsd="http://www.w3.org/2001/XMLSchema" targetNamespace="http://www.siri.org.uk/siri" elementFormDefault="qualified" attributeFormDefault="unqualified" version="2.0" id="siri_journey_support">
  <xsd:annotation>
   <xsd:appinfo>
    <Metadata xmlns="http://www.govtalk.gov.uk/CM/gms-xs">
@@ -843,9 +843,9 @@ Passengers don't need to change vehicles. The new journey is not communicated as
   </xsd:restriction>
  </xsd:simpleType>
  <!-- =====StopAssignment============================================================ -->
- <xsd:simpleType name="QuayTypeEnumeration">
+ <xsd:simpleType name="TypeOfNestedQuayEnumeration">
   <xsd:annotation>
-   <xsd:documentation>Allowed values for QuayType which is used to characterise the STOP ASSIGNMENTs. +SIRI v2.1</xsd:documentation>
+   <xsd:documentation>Allowed values for characterisation of nested QUAYs as part of a STOP ASSIGNMENT. +SIRI v2.1</xsd:documentation>
   </xsd:annotation>
   <xsd:restriction base="xsd:NMTOKEN">
    <xsd:enumeration value="platformGroup">
@@ -867,11 +867,6 @@ Passengers don't need to change vehicles. The new journey is not communicated as
     <xsd:annotation>
      <xsd:documentation>A QUAY of type 'platformEdge' may be divided into multiple sectors, e.g. "A", "B", "C" etc., to help passengers find a specific part of a vehicle.
 The first class carriage of a TRAIN might, for example, be assigned to sector "A" of a QUAY.</xsd:documentation>
-    </xsd:annotation>
-   </xsd:enumeration>
-   <xsd:enumeration value="boardingPosition">
-    <xsd:annotation>
-     <xsd:documentation>A location within a QUAY from which passengers may directly board, or onto which passengers may directly alight from a VEHICLE.</xsd:documentation>
     </xsd:annotation>
    </xsd:enumeration>
   </xsd:restriction>
