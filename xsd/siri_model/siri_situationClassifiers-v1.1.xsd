@@ -255,9 +255,9 @@ Rail transport, Roads and road transport
      <xsd:documentation>TPEG Pts43_24, additional ride</xsd:documentation>
     </xsd:annotation>
    </xsd:enumeration>
-   <xsd:enumeration value="replacementRide">
+   <xsd:enumeration value="predictableDelay">
     <xsd:annotation>
-     <xsd:documentation>TPEG Pts43_25, replacement ride</xsd:documentation>
+     <xsd:documentation>TPEG Pts43_25, predictable delay</xsd:documentation>
     </xsd:annotation>
    </xsd:enumeration>
    <xsd:enumeration value="temporarilyNonStopping">
@@ -355,7 +355,7 @@ Rail transport, Roads and road transport
      <xsd:documentation>TPEG Pti13_18, deprecated (SIRI 2.1)</xsd:documentation>
     </xsd:annotation>
    </xsd:enumeration>
-   <xsd:enumeration value="replacementService">
+   <xsd:enumeration value="predictableDelay">
     <xsd:annotation>
      <xsd:documentation>TPEG Pti13_19, deprecated (SIRI 2.1)</xsd:documentation>
     </xsd:annotation>

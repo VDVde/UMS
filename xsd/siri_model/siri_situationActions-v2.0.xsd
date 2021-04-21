@@ -643,46 +643,6 @@ Rail transport, Roads and road transport
 							<xsd:documentation>Perspective of the passenger, e.g. general, vehicleJourney, stopPoint.</xsd:documentation>
 						</xsd:annotation>
 					</xsd:element>
-					<xsd:element name="SnippetsAtStops" minOccurs="0">
-						<xsd:annotation>
-							<xsd:documentation>Text snippets to be added at specified stops</xsd:documentation>
-						</xsd:annotation>
-						<xsd:complexType>
-							<xsd:sequence>
-								<xsd:element name="SnippetAtStop" maxOccurs="unbounded">
-									<xsd:annotation>
-										<xsd:documentation>single text element to be added at a specified stop</xsd:documentation>
-									</xsd:annotation>
-									<xsd:complexType>
-										<xsd:sequence>
-											<xsd:choice>
-												<xsd:element name="AffectedStopPoint" type="AffectedStopPointStructure">
-													<xsd:annotation>
-														<xsd:documentation>Stop affected by Consequence.</xsd:documentation>
-													</xsd:annotation>
-												</xsd:element>
-												<xsd:element name="AffectedStopPlace" type="AffectedStopPlaceStructure">
-													<xsd:annotation>
-														<xsd:documentation>Stop affected by Consequence.</xsd:documentation>
-													</xsd:annotation>
-												</xsd:element>
-											</xsd:choice>
-											<xsd:element name="ArrivalSnippet" type="DefaultedTextStructure" minOccurs="0">
-												<xsd:annotation>
-													<xsd:documentation>Text snippet to be added arriving at specified station</xsd:documentation>
-												</xsd:annotation>
-											</xsd:element>
-											<xsd:element name="DepartureSnippet" type="DefaultedTextStructure" minOccurs="0">
-												<xsd:annotation>
-													<xsd:documentation>Text snippet to be added departing from specified station</xsd:documentation>
-												</xsd:annotation>
-											</xsd:element>
-										</xsd:sequence>
-									</xsd:complexType>
-								</xsd:element>
-							</xsd:sequence>
-						</xsd:complexType>
-					</xsd:element>
 					<xsd:element name="ActionPriority" type="xsd:positiveInteger" minOccurs="0">
 						<xsd:annotation>
 							<xsd:documentation>Prioritises a passenger information action from the information owner's point of view, e.g. suitable for sorting or hiding individual passenger information actions.

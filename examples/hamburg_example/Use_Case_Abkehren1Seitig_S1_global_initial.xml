@@ -25,7 +25,7 @@
 						<StartTime>2020-10-01T13:10:00+02:00</StartTime>
 						<EndTime>2020-10-01T16:00:00+02:00</EndTime>
 					</PublicationWindow>
-					<AlertCause>personOnTheLine</AlertCause>
+					<TpegReason>personOnTheLine</TpegReason>
 					<Priority>2</Priority>	<!-- high -->
 					<Planned>false</Planned>
 					<Summary xml:lang="DE">Polizei-Einsatz in Sülldorf.</Summary>

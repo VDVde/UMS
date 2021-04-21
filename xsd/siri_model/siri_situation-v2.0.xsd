@@ -1299,7 +1299,7 @@ Note: this means that ReasonName is NOT a complete message, but only a (few) wor
 					<xsd:documentation>Delay as result of this Consequence </xsd:documentation>
 				</xsd:annotation>
 			</xsd:element>
-			<xsd:element name="ReplacementRideStops" type="ReplacementRideStopsStructure" minOccurs="0">
+			<xsd:element name="PredictableDelays" type="PredictableDelaysStructure" minOccurs="0">
 				<xsd:annotation>
 					<xsd:documentation>Delay at specified stop as result of this Consequence</xsd:documentation>
 				</xsd:annotation>
@@ -1556,7 +1556,7 @@ Alternatively, AdviceRef can be used to reference a (complete) standardised advi
 			</xsd:element>
 		</xsd:sequence>
 	</xsd:complexType>
-	<xsd:complexType name="ReplacementRideStopStructure">
+	<xsd:complexType name="PredictableDelayStructure">
 		<xsd:annotation>
 			<xsd:documentation>Type for defining the delay at one stop.</xsd:documentation>
 		</xsd:annotation>
@@ -1610,12 +1610,12 @@ Alternatively, AdviceRef can be used to reference a (complete) standardised advi
 			</xsd:element>
 		</xsd:sequence>
 	</xsd:complexType>
-	<xsd:complexType name="ReplacementRideStopsStructure">
+	<xsd:complexType name="PredictableDelaysStructure">
 		<xsd:annotation>
 			<xsd:documentation>Type for defining the delay at different stops.</xsd:documentation>
 		</xsd:annotation>
 		<xsd:sequence>
-			<xsd:element name="ReplacementRideStop" type="ReplacementRideStopStructure" minOccurs="0" maxOccurs="unbounded">
+			<xsd:element name="PredictableDelay" type="PredictableDelayStructure" minOccurs="0" maxOccurs="unbounded">
 				<xsd:annotation>
 					<xsd:documentation>Additional journey time needed to overcome disruption.</xsd:documentation>
 				</xsd:annotation>
