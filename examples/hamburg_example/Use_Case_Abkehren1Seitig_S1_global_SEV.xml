@@ -27,7 +27,7 @@
 						<StartTime>2020-10-01T13:10:00+02:00</StartTime>
 						<EndTime>2020-10-01T16:00:00+02:00</EndTime>
 					</PublicationWindow>
-					<AlertCause>policeActivity</AlertCause>
+					<TpegReason>policeActivity</TpegReason>
 					<Priority>2</Priority>
 					<!-- high -->
 					<Planned>false</Planned>
@@ -99,12 +99,11 @@
 							</Blocking>
 						</Consequence>
 						<Consequence>
-							<!-- FORMER matchingInto SEV -->
 							<Period>
 								<StartTime>2020-10-01T13:45:00+02:00</StartTime>
 								<EndTime>2020-10-01T16:00:00+02:00</EndTime>
 							</Period>
-							<Condition>replacementRide</Condition>
+							<Condition>predictableDelay</Condition>
 							<!-- special handling for the case the trip starts 
 									outside the disrupped portion but ends inside -->
 							<Affects>
@@ -156,55 +155,56 @@
 								<!-- this blocks the real-time for the S1, which tells, 
 									 it would run all the way (but ends the trip in Blankenese) -->
 							</Blocking>
-							<ReplacementRideStops>
-								<ReplacementRideStop>
+							<PredictableDelays>
+								<PredictableDelay>
 									<AffectedStopPoint>
 										<StopPointRef>de:02000:81950</StopPointRef>
 										<StopPointName xml:lang="DE">Blankenese</StopPointName>
 									</AffectedStopPoint>
-									<CheckInTime>PT10M</CheckInTime>
+									<DepartureTravelProlongation>PT10M</DepartureTravelProlongation>
 									<!-- 10 minutes for the change to SEV-->
-								</ReplacementRideStop>
-								<ReplacementRideStop>
+								</PredictableDelay>
+								<PredictableDelay>
 									<AffectedStopPoint>
 										<StopPointRef>de:02000:81951</StopPointRef>
 										<StopPointName xml:lang="DE">Iserbrook</StopPointName>
 									</AffectedStopPoint>
 									<ArrivalTravelProlongation>PT15M</ArrivalTravelProlongation>
 									<DepartureTravelProlongation>PT15M</DepartureTravelProlongation>
-								</ReplacementRideStop>
-								<ReplacementRideStop>
+								</PredictableDelay>
+								<PredictableDelay>
 									<AffectedStopPoint>
 										<StopPointRef>de:02000:81952</StopPointRef>
 										<StopPointName xml:lang="DE">Sülldorf</StopPointName>
 									</AffectedStopPoint>
 									<ArrivalTravelProlongation>PT20M</ArrivalTravelProlongation>
 									<DepartureTravelProlongation>PT20M</DepartureTravelProlongation>
-								</ReplacementRideStop>
-								<ReplacementRideStop>
+								</PredictableDelay>
+								<PredictableDelay>
 									<AffectedStopPoint>
 										<StopPointRef>de:02000:81953</StopPointRef>
 										<StopPointName xml:lang="DE">Rissen</StopPointName>
 									</AffectedStopPoint>
 									<ArrivalTravelProlongation>PT25M</ArrivalTravelProlongation>
 									<DepartureTravelProlongation>PT25M</DepartureTravelProlongation>
-								</ReplacementRideStop>
-								<ReplacementRideStop>
+								</PredictableDelay>
+								<PredictableDelay>
 									<AffectedStopPoint>
 										<StopPointRef>de:01056:85950</StopPointRef>
 										<StopPointName xml:lang="DE">Wedel</StopPointName>
 									</AffectedStopPoint>
 									<ArrivalTravelProlongation>PT30M</ArrivalTravelProlongation>
-								</ReplacementRideStop>
-							</ReplacementRideStops>
+                                    <DepartureTravelProlongation>PT40M</DepartureTravelProlongation>
+                                    <!-- 10 minutes for the change from SEV-->
+								</PredictableDelay>
+							</PredictableDelays>
 						</Consequence>
 						<Consequence>
-							<!-- FORMER matchingFrom SEV -->
 							<Period>
 								<StartTime>2020-10-01T13:45:00+02:00</StartTime>
 								<EndTime>2020-10-01T16:00:00+02:00</EndTime>
 							</Period>
-							<Condition>replacementRide</Condition>
+							<Condition>predictableDelay</Condition>
 							<!-- special handling for the case the trip starts 
 									inside the disrupped portion but ends outside -->
 							<Affects>
@@ -256,48 +256,49 @@
 								<!-- this blocks the real-time for the S1, which tells, 
 									 it would run all the way (but ends the trip in Blankenese) -->
 							</Blocking>
-							<ReplacementRideStops>
-								<ReplacementRideStop>
+							<PredictableDelays>
+								<PredictableDelay>
 									<AffectedStopPoint>
 										<StopPointRef>de:02000:81950</StopPointRef>
 										<StopPointName xml:lang="DE">Blankenese</StopPointName>
 									</AffectedStopPoint>
-									<ArrivalTravelProlongation>PT20M</ArrivalTravelProlongation>
-									<CheckOutTime>PT10M</CheckOutTime>
+									<ArrivalTravelProlongation>PT30M</ArrivalTravelProlongation>
+									<DepartureTravelProlongation>PT40M</DepartureTravelProlongation>
 									<!-- 10 minutes more for the change from SEV-->
-								</ReplacementRideStop>
-								<ReplacementRideStop>
+								</PredictableDelay>
+								<PredictableDelay>
 									<AffectedStopPoint>
 										<StopPointRef>de:02000:81951</StopPointRef>
 										<StopPointName xml:lang="DE">Iserbrook</StopPointName>
 									</AffectedStopPoint>
-									<ArrivalTravelProlongation>PT15M</ArrivalTravelProlongation>
-									<DepartureTravelProlongation>PT15M</DepartureTravelProlongation>
-								</ReplacementRideStop>
-								<ReplacementRideStop>
+									<ArrivalTravelProlongation>PT25M</ArrivalTravelProlongation>
+									<DepartureTravelProlongation>PT25M</DepartureTravelProlongation>
+								</PredictableDelay>
+								<PredictableDelay>
 									<AffectedStopPoint>
 										<StopPointRef>de:02000:81952</StopPointRef>
 										<StopPointName xml:lang="DE">Sülldorf</StopPointName>
 									</AffectedStopPoint>
-									<ArrivalTravelProlongation>PT10M</ArrivalTravelProlongation>
-									<DepartureTravelProlongation>PT10M</DepartureTravelProlongation>
-								</ReplacementRideStop>
-								<ReplacementRideStop>
+									<ArrivalTravelProlongation>PT20M</ArrivalTravelProlongation>
+									<DepartureTravelProlongation>PT20M</DepartureTravelProlongation>
+								</PredictableDelay>
+								<PredictableDelay>
 									<AffectedStopPoint>
 										<StopPointRef>de:02000:81953</StopPointRef>
 										<StopPointName xml:lang="DE">Rissen</StopPointName>
 									</AffectedStopPoint>
-									<ArrivalTravelProlongation>PT5M</ArrivalTravelProlongation>
-									<DepartureTravelProlongation>PT5M</DepartureTravelProlongation>
-								</ReplacementRideStop>
-								<ReplacementRideStop>
+									<ArrivalTravelProlongation>PT15M</ArrivalTravelProlongation>
+									<DepartureTravelProlongation>PT15M</DepartureTravelProlongation>
+								</PredictableDelay>
+								<PredictableDelay>
 									<AffectedStopPoint>
 										<StopPointRef>de:01056:85950</StopPointRef>
 										<StopPointName xml:lang="DE">Wedel</StopPointName>
 									</AffectedStopPoint>
-									<CheckInTime>PT10M</CheckInTime>
-								</ReplacementRideStop>
-							</ReplacementRideStops>
+									<DepartureTravelProlongation>PT10M</DepartureTravelProlongation>
+                                    <!-- 10 minutes for the change to SEV-->
+								</PredictableDelay>
+							</PredictableDelays>
 						</Consequence>
 					</Consequences>
 					<PublishingActions>
@@ -470,12 +471,8 @@
 							</PassengerInformationAction>
 						</PublishingAction>
 						<PublishingAction>
-							<!-- FORMER matchingInto SEV -->
 							<PublishAtScope>
 								<ScopeType>line</ScopeType>
-								<Condition>snippetsAtStops</Condition>
-								<!-- special handling for the case the trip starts outside 
-										the disrupped portion but ends inside -->
 								<Affects>
 									<Networks>
 										<AffectedNetwork>
@@ -523,45 +520,6 @@
 								<RecordedAtTime>2020-10-01T13:09:00+02:00</RecordedAtTime>
 								<SourceRef>S-Bahn_MES_Disponent</SourceRef>
 								<Perspective>journeyPlanner</Perspective>
-								<SnippetsAtStops>
-									<SnippetAtStop>
-										<AffectedStopPoint>
-											<StopPointRef>de:02000:81950</StopPointRef>
-											<StopPointName xml:lang="DE">Blankenese</StopPointName>
-										</AffectedStopPoint>
-									</SnippetAtStop>
-									<SnippetAtStop>
-										<AffectedStopPoint>
-											<StopPointRef>de:02000:81951</StopPointRef>
-											<StopPointName xml:lang="DE">Iserbrook</StopPointName>
-										</AffectedStopPoint>
-										<ArrivalSnippet xml:lang="DE">ca. 15 Min. später</ArrivalSnippet>
-										<DepartureSnippet xml:lang="DE">ca. 15 Min. später</DepartureSnippet>
-									</SnippetAtStop>
-									<SnippetAtStop>
-										<AffectedStopPoint>
-											<StopPointRef>de:02000:81952</StopPointRef>
-											<StopPointName xml:lang="DE">Sülldorf</StopPointName>
-										</AffectedStopPoint>
-										<ArrivalSnippet xml:lang="DE">ca. 20 Min. später</ArrivalSnippet>
-										<DepartureSnippet xml:lang="DE">ca. 20 Min. später</DepartureSnippet>
-									</SnippetAtStop>
-									<SnippetAtStop>
-										<AffectedStopPoint>
-											<StopPointRef>de:02000:81953</StopPointRef>
-											<StopPointName xml:lang="DE">Rissen</StopPointName>
-										</AffectedStopPoint>
-										<ArrivalSnippet xml:lang="DE">ca. 25 Min. später</ArrivalSnippet>
-										<DepartureSnippet xml:lang="DE">ca. 25 Min. später</DepartureSnippet>
-									</SnippetAtStop>
-									<SnippetAtStop>
-										<AffectedStopPoint>
-											<StopPointRef>de:01056:85950</StopPointRef>
-											<StopPointName xml:lang="DE">Wedel</StopPointName>
-										</AffectedStopPoint>
-										<ArrivalSnippet xml:lang="DE">ca. 30 Min. später</ArrivalSnippet>
-									</SnippetAtStop>
-								</SnippetsAtStops>
 								<TextualContent>
 									<TextualContentSize>medium</TextualContentSize>
 									<SummaryContent>
@@ -570,8 +528,8 @@
 									<DescriptionContent>
 										<DescriptionText xml:lang="DE">Wegen eines Poilzei-Einsatzes 
 													ist derzeit keine Beförderung zwischen Blankenese und Wedel 
-													in beiden Richtungen möglich. SEV ist eingerichtet, 
-													Verlängerung der Fahrzeit </DescriptionText>
+													in beiden Richtungen möglich. SEV ist eingerichtet.
+										</DescriptionText>
 									</DescriptionContent>
 								</TextualContent>
 								<TextualContent>
@@ -587,12 +545,8 @@
 							</PassengerInformationAction>
 						</PublishingAction>
 						<PublishingAction>
-							<!-- FORMER matchingFrom SEV -->
 							<PublishAtScope>
 								<ScopeType>line</ScopeType>
-                                <Condition>snippetsAtStops</Condition>
-								<!-- special handling for the case the trip starts inside 
-										the disrupped portion but ends outside -->
 								<Affects>
 									<Networks>
 										<AffectedNetwork>
@@ -640,47 +594,6 @@
 								<RecordedAtTime>2020-10-01T13:09:00+02:00</RecordedAtTime>
 								<SourceRef>S-Bahn_MES_Disponent</SourceRef>
 								<Perspective>journeyPlanner</Perspective>
-								<SnippetsAtStops>
-									<SnippetAtStop>
-										<AffectedStopPoint>
-											<StopPointRef>de:02000:81950</StopPointRef>
-											<StopPointName xml:lang="DE">Blankenese</StopPointName>
-										</AffectedStopPoint>
-										<ArrivalSnippet xml:lang="DE">ca. 20 Min später</ArrivalSnippet>
-										<DepartureSnippet xml:lang="DE">keine</DepartureSnippet>
-									</SnippetAtStop>
-									<SnippetAtStop>
-										<AffectedStopPoint>
-											<StopPointRef>de:02000:81951</StopPointRef>
-											<StopPointName xml:lang="DE">Iserbrook</StopPointName>
-										</AffectedStopPoint>
-										<ArrivalSnippet xml:lang="DE">ca. 15 Min später</ArrivalSnippet>
-										<DepartureSnippet xml:lang="DE">ca. 15 Min.</DepartureSnippet>
-									</SnippetAtStop>
-									<SnippetAtStop>
-										<AffectedStopPoint>
-											<StopPointRef>de:02000:81952</StopPointRef>
-											<StopPointName xml:lang="DE">Sülldorf</StopPointName>
-										</AffectedStopPoint>
-										<ArrivalSnippet xml:lang="DE">ca. 10 Min später</ArrivalSnippet>
-										<DepartureSnippet xml:lang="DE">ca. 20 Min</DepartureSnippet>
-									</SnippetAtStop>
-									<SnippetAtStop>
-										<AffectedStopPoint>
-											<StopPointRef>de:02000:81953</StopPointRef>
-											<StopPointName xml:lang="DE">Rissen</StopPointName>
-										</AffectedStopPoint>
-										<ArrivalSnippet xml:lang="DE">ca. 5 Min später.</ArrivalSnippet>
-										<DepartureSnippet xml:lang="DE">ca. 25 Min.</DepartureSnippet>
-									</SnippetAtStop>
-									<SnippetAtStop>
-										<AffectedStopPoint>
-											<StopPointRef>de:01056:85950</StopPointRef>
-											<StopPointName xml:lang="DE">Wedel</StopPointName>
-										</AffectedStopPoint>
-										<DepartureSnippet xml:lang="DE">ca. 30 Min.</DepartureSnippet>
-									</SnippetAtStop>
-								</SnippetsAtStops>
 								<TextualContent>
 									<TextualContentSize>medium</TextualContentSize>
 									<SummaryContent>

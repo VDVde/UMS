@@ -25,7 +25,7 @@
 						<StartTime>2020-08-17T00:00:00+02:00</StartTime>
 						<EndTime>2020-12-06T23:59:00+01:00</EndTime>
 					</PublicationWindow>
-					<AlertCause>constructionWork</AlertCause>
+					<TpegReason>constructionWork</TpegReason>
 					<Priority>3</Priority>  <!-- normal -->
 					<Planned>true</Planned>
 					<Summary xml:lang="DE">Bauarbeiten an Haltestelle Landungsbrücken</Summary>

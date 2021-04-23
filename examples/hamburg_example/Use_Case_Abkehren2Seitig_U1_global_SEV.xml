@@ -27,7 +27,7 @@
 						<StartTime>2020-10-01T13:10:00+02:00</StartTime>
 						<EndTime>2020-10-01T16:00:00+02:00</EndTime>
 					</PublicationWindow>
-					<AlertCause>policeActivity</AlertCause>
+					<TpegReason>policeActivity</TpegReason>
 					<Priority>2</Priority>
 					<!-- high -->
 					<Planned>false</Planned>
@@ -97,7 +97,7 @@
 							</Period>
 
 							<!-- Simulation of SEV by a DELAY for the SEV-area -->
-							<Condition>replacementRide</Condition>
+							<Condition>predictableDelay</Condition>
 							<!-- special handling for the case the trip starts 
 									outside the disrupped portion but ends inside -->
 							<Affects>
@@ -141,45 +141,45 @@
 							</Advice>
 							<Blocking>
 								<JourneyPlanner>true</JourneyPlanner>
-								<!-- handle replacementRide (SEV) in Journey Planner -->
+								<!-- handle predictableDelay (SEV) in Journey Planner -->
 								<RealTime>true</RealTime>
 								<!-- this blocks the real-time for the U1, which tells, 
 									 it would run all the way (but ends the trip in Hauptbahnhof Süd) -->
 							</Blocking>
-							<ReplacementRideStops>
-								<ReplacementRideStop>
+							<PredictableDelays>
+								<PredictableDelay>
 									<AffectedStopPoint>
 										<StopPointRef>de:02000:10906</StopPointRef>
 										<StopPointName xml:lang="DE">Hauptbahnhof Süd</StopPointName>
 									</AffectedStopPoint>
-									<CheckInTime>PT10M</CheckInTime>
+									<DepartureTravelProlongation>PT10M</DepartureTravelProlongation>
 									<!-- 10 minutes for the change to SEV-->
-								</ReplacementRideStop>
-								<ReplacementRideStop>
+								</PredictableDelay>
+								<PredictableDelay>
 									<AffectedStopPoint>
 										<StopPointRef>de:02000:10907</StopPointRef>
 										<StopPointName xml:lang="DE">Steinstraße</StopPointName>
 									</AffectedStopPoint>
-									<ArrivalTravelProlongation>PT5M</ArrivalTravelProlongation>
-									<DepartureTravelProlongation>PT5M</DepartureTravelProlongation>
-								</ReplacementRideStop>
-								<ReplacementRideStop>
+									<ArrivalTravelProlongation>PT15M</ArrivalTravelProlongation>
+									<DepartureTravelProlongation>PT15M</DepartureTravelProlongation>
+								</PredictableDelay>
+								<PredictableDelay>
 									<AffectedStopPoint>
 										<StopPointRef>de:02000:11903</StopPointRef>
 										<StopPointName xml:lang="DE">Meßberg</StopPointName>
 									</AffectedStopPoint>
-									<ArrivalTravelProlongation>PT10M</ArrivalTravelProlongation>
-									<DepartureTravelProlongation>PT10M</DepartureTravelProlongation>
-								</ReplacementRideStop>
-								<ReplacementRideStop>
+									<ArrivalTravelProlongation>PT20M</ArrivalTravelProlongation>
+									<DepartureTravelProlongation>PT20M</DepartureTravelProlongation>
+								</PredictableDelay>
+								<PredictableDelay>
 									<AffectedStopPoint>
 										<StopPointRef>de:02000:11950</StopPointRef>
 										<StopPointName xml:lang="DE">Jungfernstieg</StopPointName>
 									</AffectedStopPoint>
-									<CheckOutTime>PT10M</CheckOutTime>
+									<DepartureTravelProlongation>PT30M</DepartureTravelProlongation>
 									<!-- 10 minutes for the change to SEV-->
-								</ReplacementRideStop>
-							</ReplacementRideStops>
+								</PredictableDelay>
+							</PredictableDelays>
 						</Consequence>
 						<Consequence>
 							<!-- FORMER matchingInto SEV Ri 1 -->
@@ -187,10 +187,7 @@
 								<StartTime>2020-10-01T13:45:00+02:00</StartTime>
 								<EndTime>2020-10-01T16:00:00+02:00</EndTime>
 							</Period>
-							<!-- Simulation of SEV by a DELAY and an INCREMENT_DELAY for the SEV-area -->
-							<Condition>replacementRide</Condition>
-							<!-- special handling for the case the trip starts 
-									outside the disrupped portion but ends inside -->
+							<Condition>predictableDelay</Condition>
 							<Affects>
 								<Networks>
 									<AffectedNetwork>
@@ -241,40 +238,40 @@
 								<!-- this blocks the real-time for the U1, which tells, 
 									 it would run all the way (but ends the trip in Hauptbahnhof Süd) -->
 							</Blocking>
-							<ReplacementRideStops>
-								<ReplacementRideStop>
+							<PredictableDelays>
+								<PredictableDelay>
 									<AffectedStopPoint>
 										<StopPointRef>de:02000:11950</StopPointRef>
 										<StopPointName xml:lang="DE">Jungfernstieg</StopPointName>
 									</AffectedStopPoint>
-									<CheckInTime>PT10M</CheckInTime>
+									<DepartureTravelProlongation>PT10M</DepartureTravelProlongation>
 									<!-- 10 minutes for the change to SEV-->
-								</ReplacementRideStop>
-								<ReplacementRideStop>
+								</PredictableDelay>
+								<PredictableDelay>
 									<AffectedStopPoint>
 										<StopPointRef>de:02000:11903</StopPointRef>
 										<StopPointName xml:lang="DE">Meßberg</StopPointName>
 									</AffectedStopPoint>
-									<ArrivalTravelProlongation>PT5M</ArrivalTravelProlongation>
-									<DepartureTravelProlongation>PT5M</DepartureTravelProlongation>
-								</ReplacementRideStop>
-								<ReplacementRideStop>
+									<ArrivalTravelProlongation>PT15M</ArrivalTravelProlongation>
+									<DepartureTravelProlongation>PT15M</DepartureTravelProlongation>
+								</PredictableDelay>
+								<PredictableDelay>
 									<AffectedStopPoint>
 										<StopPointRef>de:02000:10907</StopPointRef>
 										<StopPointName xml:lang="DE">Steinstraße</StopPointName>
 									</AffectedStopPoint>
-									<ArrivalTravelProlongation>PT10M</ArrivalTravelProlongation>
-									<DepartureTravelProlongation>PT10M</DepartureTravelProlongation>
-								</ReplacementRideStop>
-								<ReplacementRideStop>
+									<ArrivalTravelProlongation>PT20M</ArrivalTravelProlongation>
+									<DepartureTravelProlongation>PT20M</DepartureTravelProlongation>
+								</PredictableDelay>
+								<PredictableDelay>
 									<AffectedStopPoint>
 										<StopPointRef>de:02000:10906</StopPointRef>
 										<StopPointName xml:lang="DE">Hauptbahnhof Süd</StopPointName>
 									</AffectedStopPoint>
-									<CheckOutTime>PT10M</CheckOutTime>
+									<DepartureTravelProlongation>PT30M</DepartureTravelProlongation>
 									<!-- 10 minutes for the change to SEV-->
-								</ReplacementRideStop>
-							</ReplacementRideStops>
+								</PredictableDelay>
+							</PredictableDelays>
 						</Consequence>
 					</Consequences>
 					<PublishingActions>
@@ -450,12 +447,9 @@
 								</TextualContent>
 							</PassengerInformationAction>
 						</PublishingAction>
-						<PublishingAction>	<!-- Former matchingInto SEV Ri 6 -->
+						<PublishingAction>
 							<PublishAtScope>
 								<ScopeType>line</ScopeType>
-								<Condition>snippetsAtStops</Condition>
-								<!-- special handling for the case the trip starts outside 
-										the disrupped portion but ends inside -->
 								<Affects>
 									<Networks>
 										<AffectedNetwork>
@@ -499,38 +493,6 @@
 								<RecordedAtTime>2020-10-01T13:09:00+02:00</RecordedAtTime>
 								<SourceRef>Hochbahn_U_MES_Disponent</SourceRef>
 								<Perspective>journeyPlanner</Perspective>
-								<SnippetsAtStops>
-									<SnippetAtStop>
-										<AffectedStopPoint>
-											<StopPointRef>de:02000:10906</StopPointRef>
-											<StopPointName xml:lang="DE">Hauptbahnhof Süd</StopPointName>
-										</AffectedStopPoint>
-									</SnippetAtStop>
-									<SnippetAtStop>
-										<AffectedStopPoint>
-											<StopPointRef>de:02000:10907</StopPointRef>
-											<StopPointName xml:lang="DE">Steinstraße</StopPointName>
-										</AffectedStopPoint>
-										<ArrivalSnippet xml:lang="DE">ca. 15 Min. später</ArrivalSnippet>
-										<DepartureSnippet xml:lang="DE">ca. 15 Min. später</DepartureSnippet>
-									</SnippetAtStop>
-									<SnippetAtStop>
-										<AffectedStopPoint>
-											<StopPointRef>de:02000:11903</StopPointRef>
-											<StopPointName xml:lang="DE">Meßberg</StopPointName>
-										</AffectedStopPoint>
-										<ArrivalSnippet xml:lang="DE">ca. 20 Min. später</ArrivalSnippet>
-										<DepartureSnippet xml:lang="DE">ca. 20 Min. später</DepartureSnippet>
-									</SnippetAtStop>
-									<SnippetAtStop>
-										<AffectedStopPoint>
-											<StopPointRef>de:02000:11950</StopPointRef>
-											<StopPointName xml:lang="DE">Jungfernstieg</StopPointName>
-										</AffectedStopPoint>
-										<ArrivalSnippet xml:lang="DE">ca. 25 Min. später</ArrivalSnippet>
-										<DepartureSnippet xml:lang="DE">ca. 35 Min. später</DepartureSnippet>
-									</SnippetAtStop>
-								</SnippetsAtStops>
 								<TextualContent>
 									<TextualContentSize>medium</TextualContentSize>
 									<SummaryContent>
@@ -558,9 +520,6 @@
 						<PublishingAction>	<!-- Former matchingInto SEV Ri 1 -->
 							<PublishAtScope>
 								<ScopeType>line</ScopeType>
-								<Condition>snippetsAtStops</Condition>
-								<!-- special handling for the case the trip starts outside 
-										the disrupped portion but ends inside -->
 								<Affects>
 									<Networks>
 										<AffectedNetwork>
@@ -608,38 +567,6 @@
 								<RecordedAtTime>2020-10-01T13:09:00+02:00</RecordedAtTime>
 								<SourceRef>Hochbahn_U_MES_Disponent</SourceRef>
 								<Perspective>journeyPlanner</Perspective>
-								<SnippetsAtStops>
-									<SnippetAtStop>
-										<AffectedStopPoint>
-											<StopPointRef>de:02000:11950</StopPointRef>
-											<StopPointName xml:lang="DE">Jungfernstieg</StopPointName>
-										</AffectedStopPoint>
-									</SnippetAtStop>
-									<SnippetAtStop>
-										<AffectedStopPoint>
-											<StopPointRef>de:02000:11903</StopPointRef>
-											<StopPointName xml:lang="DE">Meßberg</StopPointName>
-										</AffectedStopPoint>
-										<ArrivalSnippet xml:lang="DE">ca. 15 Min. später</ArrivalSnippet>
-										<DepartureSnippet xml:lang="DE">ca. 15 Min. später</DepartureSnippet>
-									</SnippetAtStop>
-									<SnippetAtStop>
-										<AffectedStopPoint>
-											<StopPointRef>de:02000:10907</StopPointRef>
-											<StopPointName xml:lang="DE">Steinstraße</StopPointName>
-										</AffectedStopPoint>
-										<ArrivalSnippet xml:lang="DE">ca. 20 Min. später</ArrivalSnippet>
-										<DepartureSnippet xml:lang="DE">ca. 20 Min. später</DepartureSnippet>
-									</SnippetAtStop>
-									<SnippetAtStop>
-										<AffectedStopPoint>
-											<StopPointRef>de:02000:10906</StopPointRef>
-											<StopPointName xml:lang="DE">Hauptbahnhof Süd</StopPointName>
-										</AffectedStopPoint>
-										<ArrivalSnippet xml:lang="DE">ca. 25 Min. später</ArrivalSnippet>
-										<DepartureSnippet xml:lang="DE">ca. 35 Min. später</DepartureSnippet>
-									</SnippetAtStop>
-								</SnippetsAtStops>
 								<TextualContent>
 									<TextualContentSize>medium</TextualContentSize>
 									<SummaryContent>
