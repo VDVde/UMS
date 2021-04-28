@@ -162,6 +162,7 @@ Rail transport, Roads and road transport
    <xsd:enumeration value="temporarilyNonStopping"/>
    <xsd:enumeration value="temporaryStopplace"/>
    <xsd:enumeration value="undefinedStatus"/>
+   <xsd:enumeration value="predictableDelay"/>
   </xsd:restriction>
  </xsd:simpleType>
  <!-- ==Verification================================= -->
